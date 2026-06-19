@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — Madelyn Janz</title>
+  <meta name="description" content="About Madelyn Janz — visual storyteller, photographer, and digital designer." />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">Madelyn Janz</a>
+      <ul class="nav__links" role="list">
+        <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+        <li class="nav__item">
+          <a href="photography.html" class="nav__link">Photography
+            <svg viewBox="0 0 24 24" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </a>
+          <div class="nav__dropdown">
+            <a href="photography.html#landscapes">Landscapes</a>
+            <a href="photography.html#portraits">Portraits</a>
+            <a href="photography.html#street">Street</a>
+            <a href="photography.html#nature">Nature</a>
+          </div>
+        </li>
+        <li class="nav__item">
+          <a href="architecture.html" class="nav__link">Architecture
+            <svg viewBox="0 0 24 24" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </a>
+          <div class="nav__dropdown">
+            <a href="architecture.html#exterior">Exterior Renders</a>
+            <a href="architecture.html#interior">Interior Renders</a>
+            <a href="architecture.html#conceptual">Conceptual</a>
+          </div>
+        </li>
+        <li class="nav__item">
+          <a href="creations.html" class="nav__link">Digital Creations
+            <svg viewBox="0 0 24 24" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </a>
+          <div class="nav__dropdown">
+            <a href="creations.html#email">Email Campaigns</a>
+            <a href="creations.html#figma">Figma & UI Design</a>
+            <a href="creations.html#branding">Branding</a>
+          </div>
+        </li>
+        <li class="nav__item"><a href="about.html" class="nav__link active">About</a></li>
+        <li class="nav__item"><a href="index.html#contact" class="nav__link">Contact</a></li>
+      </ul>
+      <button class="nav__hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <div class="nav__mobile">
+    <a href="index.html" class="nav__mobile-link">Home</a>
+    <div class="nav__mobile-link">Photography</div>
+    <div class="nav__mobile-sub">
+      <a href="photography.html#landscapes">Landscapes</a><a href="photography.html#portraits">Portraits</a>
+      <a href="photography.html#street">Street</a><a href="photography.html#nature">Nature</a>
+    </div>
+    <div class="nav__mobile-link">Architecture</div>
+    <div class="nav__mobile-sub">
+      <a href="architecture.html#exterior">Exterior Renders</a>
+      <a href="architecture.html#interior">Interior Renders</a>
+      <a href="architecture.html#conceptual">Conceptual</a>
+    </div>
+    <div class="nav__mobile-link">Digital Creations</div>
+    <div class="nav__mobile-sub">
+      <a href="creations.html#email">Email Campaigns</a>
+      <a href="creations.html#figma">Figma & UI Design</a>
+      <a href="creations.html#branding">Branding</a>
+    </div>
+    <a href="about.html" class="nav__mobile-link">About</a>
+    <a href="index.html#contact" class="nav__mobile-link">Contact</a>
+  </div>
+
+  <!-- ============================================================
+       ABOUT PAGE
+       ============================================================ -->
+  <main class="about-page">
+
+    <section class="about-hero">
+      <div class="container">
+        <div class="about-hero__inner">
+
+          <!-- Photo column -->
+          <!-- SWAP: replace the placeholder div inside .about-photo__frame with:
+               <img src="images/about/portrait.jpg" alt="Madelyn Janz" class="about-photo__img" />
+          -->
+          <div class="about-photo reveal-left">
+            <div class="about-photo__frame">
+              <div class="about-photo__placeholder">
+                YOUR PHOTO HERE<br>
+                <span style="font-size:0.75rem;opacity:0.6;margin-top:0.5rem;display:block;">
+                  swap with images/about/portrait.jpg
+                </span>
+              </div>
+            </div>
+            <div class="about-photo__accent"></div>
+          </div>
+
+          <!-- Text column -->
+          <div class="about-text reveal-right">
+
+            <p class="section-label about-text__eyebrow">About me</p>
+
+            <h1 class="display-lg about-text__title">
+              Hi, I'm <span class="gradient-text">Madelyn.</span>
+            </h1>
+
+            <!-- SWAP: replace this bio with your own words -->
+            <p class="about-text__bio">
+              I'm a visual storyteller based in [Your City] with a passion for capturing
+              the world through a lens — whether that's a sweeping landscape, a precisely
+              rendered building, or a meticulously crafted digital experience.
+            </p>
+            <p class="about-text__bio">
+              My work lives at the intersection of art and precision. I believe every image,
+              every render, and every design should feel intentional — bold enough to stop
+              someone mid-scroll, and detailed enough to reward a second look.
+            </p>
+            <p class="about-text__bio">
+              When I'm not shooting or designing, you'll find me exploring new places,
+              hunting for the perfect light, or obsessing over typefaces.
+            </p>
+
+            <div class="about-text__divider"></div>
+
+            <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+              <a href="index.html#contact" class="btn btn--primary">Get in touch</a>
+              <a href="index.html" class="btn btn--outline">View my work</a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SKILLS
+         SWAP: update each skill-card with your actual disciplines.
+         Add more cards as needed — the grid auto-fills.
+         ============================================================ -->
+    <section class="skills-section">
+      <div class="container">
+
+        <div class="reveal">
+          <p class="section-label">What I do</p>
+          <h2 class="display-md" style="margin-bottom:0.5rem;">Skills &amp; Disciplines</h2>
+        </div>
+
+        <div class="skills-grid">
+
+          <div class="skill-card reveal delay-1">
+            <div class="skill-card__icon" style="background:linear-gradient(135deg,#7c3aed,#0891b2);">
+              📷
+            </div>
+            <div class="skill-card__name">Digital Photography</div>
+            <p class="skill-card__desc">
+              Landscape, portrait, street, and nature photography. Skilled in composition,
+              lighting, and post-processing in Lightroom &amp; Photoshop.
+            </p>
+          </div>
+
+          <div class="skill-card reveal delay-2">
+            <div class="skill-card__icon" style="background:linear-gradient(135deg,#0891b2,#c2410c);">
+              🏛️
+            </div>
+            <div class="skill-card__name">Architecture Visualization</div>
+            <p class="skill-card__desc">
+              Photorealistic 3D rendering for residential and commercial projects.
+              Proficient in [your tools — e.g. Lumion, V-Ray, Blender, SketchUp].
+            </p>
+          </div>
+
+          <div class="skill-card reveal delay-3">
+            <div class="skill-card__icon" style="background:linear-gradient(135deg,#c2410c,#7c3aed);">
+              ✉️
+            </div>
+            <div class="skill-card__name">Email Design</div>
+            <p class="skill-card__desc">
+              Designing high-converting email campaigns — from concept to code-ready
+              templates. Experienced with [Mailchimp / Klaviyo / HubSpot].
+            </p>
+          </div>
+
+          <div class="skill-card reveal delay-1">
+            <div class="skill-card__icon" style="background:linear-gradient(135deg,#7c3aed,#c2410c);">
+              🎨
+            </div>
+            <div class="skill-card__name">UI / UX Design</div>
+            <p class="skill-card__desc">
+              End-to-end product design in Figma — wireframes, high-fidelity mockups,
+              interactive prototypes, and design systems.
+            </p>
+          </div>
+
+          <div class="skill-card reveal delay-2">
+            <div class="skill-card__icon" style="background:linear-gradient(135deg,#0891b2,#7c3aed);">
+              🖋️
+            </div>
+            <div class="skill-card__name">Brand Identity</div>
+            <p class="skill-card__desc">
+              Creating cohesive visual identities — logos, color systems, typography,
+              and brand guidelines that communicate a clear story.
+            </p>
+          </div>
+
+          <!-- Add a new skill card here by copying the block above -->
+          <div class="skill-card reveal delay-3">
+            <div class="skill-card__icon" style="background:linear-gradient(135deg,#c2410c,#0891b2);">
+              ⚡
+            </div>
+            <div class="skill-card__name">Photo Editing &amp; Retouching</div>
+            <p class="skill-card__desc">
+              Advanced retouching, color grading, and compositing in Adobe
+              Photoshop and Lightroom. From subtle refinements to full transformations.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact section (reused from homepage) -->
+    <section class="contact" id="contact">
+      <div class="container">
+        <div class="contact__inner reveal">
+          <p class="section-label">Get in touch</p>
+          <h2 class="display-lg contact__title">Let's Work Together</h2>
+          <p class="contact__body">
+            Whether you have a project in mind, a collaboration idea, or just want to say hello —
+            my inbox is always open.
+          </p>
+
+          <!-- SWAP: your real email -->
+          <a href="mailto:your@email.com" class="contact__email">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+            your@email.com
+          </a>
+
+          <!-- SWAP hrefs with your real profile URLs -->
+          <div class="contact__socials">
+            <a href="#" class="social-btn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                <circle cx="12" cy="12" r="4"/>
+                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+              </svg>
+              Instagram
+            </a>
+            <a href="#" class="social-btn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/>
+                <rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/>
+              </svg>
+              LinkedIn
+            </a>
+            <a href="#" class="social-btn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M1 6h8.5C12 6 14 7.5 14 10s-2 4-4.5 4H1V6z"/>
+                <path d="M1 14h9.5C14 14 16 15.5 16 18s-2 4-5.5 4H1V14z"/>
+                <line x1="15" y1="7" x2="23" y2="7"/>
+                <path d="M19 4.5C17 4.5 15 6 15 8.5s2 4 4 4 4-1.5 4-4"/>
+              </svg>
+              Behance
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <span class="footer__logo">Madelyn Janz</span>
+    <span>&copy; <span id="year"></span> Madelyn Janz. All rights reserved.</span>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

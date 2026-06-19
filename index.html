@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Madelyn Janz — Portfolio</title>
+  <meta name="description" content="Portfolio of Madelyn Janz — Digital Photography, Architecture Renders, and Creative Design." />
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <!-- Open Graph (optional social preview) -->
+  <meta property="og:title" content="Madelyn Janz Portfolio" />
+  <meta property="og:type" content="website" />
+</head>
+<body>
+
+  <!-- ============================================================
+       NAVIGATION
+       ============================================================ -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+
+      <!-- Logo -->
+      <a href="index.html" class="nav__logo">Madelyn Janz</a>
+
+      <!-- Desktop links -->
+      <ul class="nav__links" role="list">
+
+        <li class="nav__item">
+          <a href="index.html" class="nav__link active">Home</a>
+        </li>
+
+        <!-- Photography dropdown -->
+        <li class="nav__item">
+          <a href="photography.html" class="nav__link">
+            Photography
+            <svg viewBox="0 0 24 24" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </a>
+          <div class="nav__dropdown">
+            <a href="photography.html#landscapes">Landscapes</a>
+            <a href="photography.html#portraits">Portraits</a>
+            <a href="photography.html#street">Street</a>
+            <a href="photography.html#nature">Nature</a>
+          </div>
+        </li>
+
+        <!-- Architecture dropdown -->
+        <li class="nav__item">
+          <a href="architecture.html" class="nav__link">
+            Architecture
+            <svg viewBox="0 0 24 24" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </a>
+          <div class="nav__dropdown">
+            <a href="architecture.html#exterior">Exterior Renders</a>
+            <a href="architecture.html#interior">Interior Renders</a>
+            <a href="architecture.html#conceptual">Conceptual</a>
+          </div>
+        </li>
+
+        <!-- Digital Creations dropdown -->
+        <li class="nav__item">
+          <a href="creations.html" class="nav__link">
+            Digital Creations
+            <svg viewBox="0 0 24 24" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </a>
+          <div class="nav__dropdown">
+            <a href="creations.html#email">Email Campaigns</a>
+            <a href="creations.html#figma">Figma & UI Design</a>
+            <a href="creations.html#branding">Branding</a>
+          </div>
+        </li>
+
+        <li class="nav__item">
+          <a href="about.html" class="nav__link">About</a>
+        </li>
+
+        <li class="nav__item">
+          <a href="#contact" class="nav__link">Contact</a>
+        </li>
+
+      </ul>
+
+      <!-- Hamburger (mobile) -->
+      <button class="nav__hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile nav overlay -->
+  <div class="nav__mobile" aria-hidden="true">
+    <a href="index.html" class="nav__mobile-link">Home</a>
+
+    <div class="nav__mobile-link">Photography</div>
+    <div class="nav__mobile-sub">
+      <a href="photography.html#landscapes">Landscapes</a>
+      <a href="photography.html#portraits">Portraits</a>
+      <a href="photography.html#street">Street</a>
+      <a href="photography.html#nature">Nature</a>
+    </div>
+
+    <div class="nav__mobile-link">Architecture</div>
+    <div class="nav__mobile-sub">
+      <a href="architecture.html#exterior">Exterior Renders</a>
+      <a href="architecture.html#interior">Interior Renders</a>
+      <a href="architecture.html#conceptual">Conceptual</a>
+    </div>
+
+    <div class="nav__mobile-link">Digital Creations</div>
+    <div class="nav__mobile-sub">
+      <a href="creations.html#email">Email Campaigns</a>
+      <a href="creations.html#figma">Figma & UI Design</a>
+      <a href="creations.html#branding">Branding</a>
+    </div>
+
+    <a href="about.html" class="nav__mobile-link">About</a>
+    <a href="#contact"   class="nav__mobile-link">Contact</a>
+  </div>
+
+  <!-- ============================================================
+       HERO SLIDESHOW
+       SWAP IMAGES: replace the gradient divs below with:
+       <img src="images/banner/your-image.jpg" alt="..." class="slide__img" />
+       ============================================================ -->
+  <section class="hero" aria-label="Featured work slideshow">
+    <div class="slideshow">
+
+      <!-- Slide 1 — SWAP: add your banner image here -->
+      <div class="slide active">
+        <div class="slide__placeholder" style="background: linear-gradient(135deg, #1a0533 0%, #0c1a3a 50%, #2d0a00 100%);">
+          <!-- SWAP: &lt;img src="images/banner/banner-1.jpg" alt="Banner 1" class="slide__img" /&gt; -->
+          BANNER IMAGE 1 — swap with images/banner/banner-1.jpg
+        </div>
+        <div class="slide__overlay"></div>
+      </div>
+
+      <!-- Slide 2 — SWAP: add your banner image here -->
+      <div class="slide">
+        <div class="slide__placeholder" style="background: linear-gradient(135deg, #0a0c2e 0%, #1a0533 50%, #0d2c1a 100%);">
+          BANNER IMAGE 2 — swap with images/banner/banner-2.jpg
+        </div>
+        <div class="slide__overlay"></div>
+      </div>
+
+      <!-- Slide 3 — SWAP: add your banner image here -->
+      <div class="slide">
+        <div class="slide__placeholder" style="background: linear-gradient(135deg, #2d1200 0%, #0a0c2e 50%, #2d0a22 100%);">
+          BANNER IMAGE 3 — swap with images/banner/banner-3.jpg
+        </div>
+        <div class="slide__overlay"></div>
+      </div>
+
+      <!-- Slide 4 — SWAP: add your banner image here -->
+      <div class="slide">
+        <div class="slide__placeholder" style="background: linear-gradient(135deg, #0a1a2d 0%, #1a0029 50%, #1a0a00 100%);">
+          BANNER IMAGE 4 — swap with images/banner/banner-4.jpg
+        </div>
+        <div class="slide__overlay"></div>
+      </div>
+
+      <!-- Arrow controls -->
+      <button class="slideshow__arrow slideshow__arrow--prev" aria-label="Previous slide">
+        <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <button class="slideshow__arrow slideshow__arrow--next" aria-label="Next slide">
+        <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+
+      <!-- Navigation dots -->
+      <div class="slideshow__dots" aria-label="Slide navigation">
+        <button class="slideshow__dot active" aria-label="Slide 1"></button>
+        <button class="slideshow__dot" aria-label="Slide 2"></button>
+        <button class="slideshow__dot" aria-label="Slide 3"></button>
+        <button class="slideshow__dot" aria-label="Slide 4"></button>
+      </div>
+
+      <!-- Hero text overlay -->
+      <div class="hero__text">
+        <p class="hero__tagline">Creative Portfolio</p>
+        <h1 class="hero__name gradient-text">Madelyn<br>Janz</h1>
+        <p class="hero__description">
+          Visual storyteller crafting images, spaces, and digital experiences that leave a mark.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CATEGORY GRID
+       To add a new category: copy a .category-tile block,
+       update the href, image, label, and name. That's it.
+       ============================================================ -->
+  <section class="categories">
+    <div class="container">
+
+      <div class="categories__header reveal">
+        <p class="section-label">Browse by category</p>
+        <h2 class="display-lg">Explore My Work</h2>
+      </div>
+
+      <div class="categories__grid">
+
+        <!-- Category 1: Digital Photography -->
+        <a href="photography.html" class="category-tile reveal delay-1">
+          <!-- SWAP: <img src="images/photography/cover.jpg" alt="Digital Photography" class="category-tile__img" /> -->
+          <div class="category-tile__placeholder"
+               style="background: linear-gradient(135deg, #0f0824 0%, #1e1040 50%, #0a1428 100%);">
+            PHOTOGRAPHY COVER — swap with images/photography/cover.jpg
+          </div>
+          <div class="category-tile__overlay"></div>
+          <div class="category-tile__content">
+            <div class="category-tile__label">Photography</div>
+            <div class="category-tile__name">Digital<br>Photography</div>
+            <div class="category-tile__arrow">
+              View Gallery
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </div>
+          </div>
+        </a>
+
+        <!-- Category 2: Architecture Renders -->
+        <a href="architecture.html" class="category-tile reveal delay-2">
+          <!-- SWAP: <img src="images/architecture/cover.jpg" alt="Architecture Renders" class="category-tile__img" /> -->
+          <div class="category-tile__placeholder"
+               style="background: linear-gradient(135deg, #0a1428 0%, #071420 50%, #1a0a0a 100%);">
+            ARCHITECTURE COVER — swap with images/architecture/cover.jpg
+          </div>
+          <div class="category-tile__overlay"></div>
+          <div class="category-tile__content">
+            <div class="category-tile__label">3D & Rendering</div>
+            <div class="category-tile__name">Architecture<br>Renders</div>
+            <div class="category-tile__arrow">
+              View Gallery
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </div>
+          </div>
+        </a>
+
+        <!-- Category 3: Email & Figma Creations -->
+        <a href="creations.html" class="category-tile reveal delay-3">
+          <!-- SWAP: <img src="images/creations/cover.jpg" alt="Digital Creations" class="category-tile__img" /> -->
+          <div class="category-tile__placeholder"
+               style="background: linear-gradient(135deg, #1a0800 0%, #0a0014 50%, #001a14 100%);">
+            CREATIONS COVER — swap with images/creations/cover.jpg
+          </div>
+          <div class="category-tile__overlay"></div>
+          <div class="category-tile__content">
+            <div class="category-tile__label">Design</div>
+            <div class="category-tile__name">Email &amp;<br>Figma Creations</div>
+            <div class="category-tile__arrow">
+              View Gallery
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </div>
+          </div>
+        </a>
+
+        <!--
+          ADD A NEW CATEGORY HERE — copy this block:
+
+          <a href="your-page.html" class="category-tile reveal">
+            <img src="images/your-category/cover.jpg" alt="Category Name" class="category-tile__img" />
+            <div class="category-tile__overlay"></div>
+            <div class="category-tile__content">
+              <div class="category-tile__label">Sub-label</div>
+              <div class="category-tile__name">Category<br>Name</div>
+              <div class="category-tile__arrow">
+                View Gallery
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+                </svg>
+              </div>
+            </div>
+          </a>
+        -->
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CONTACT
+       ============================================================ -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="contact__inner reveal">
+
+        <p class="section-label">Get in touch</p>
+        <h2 class="display-lg contact__title">Let's Work Together</h2>
+        <p class="contact__body">
+          Whether you have a project in mind, a collaboration idea, or just want to say hello —
+          my inbox is always open.
+        </p>
+
+        <!-- SWAP: replace with your real email address -->
+        <a href="mailto:your@email.com" class="contact__email">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <polyline points="22,6 12,13 2,6"/>
+          </svg>
+          your@email.com
+        </a>
+
+        <!-- Social links — SWAP hrefs with your real profile URLs -->
+        <div class="contact__socials">
+
+          <a href="#" class="social-btn" aria-label="Instagram">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+              <circle cx="12" cy="12" r="4"/>
+              <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+            </svg>
+            Instagram
+          </a>
+
+          <a href="#" class="social-btn" aria-label="LinkedIn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/>
+              <rect x="2" y="9" width="4" height="12"/>
+              <circle cx="4" cy="4" r="2"/>
+            </svg>
+            LinkedIn
+          </a>
+
+          <a href="#" class="social-btn" aria-label="Behance">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M1 6h8.5C12 6 14 7.5 14 10s-2 4-4.5 4H1V6z"/>
+              <path d="M1 14h9.5C14 14 16 15.5 16 18s-2 4-5.5 4H1V14z"/>
+              <line x1="15" y1="7" x2="23" y2="7"/>
+              <path d="M19 4.5C17 4.5 15 6 15 8.5s2 4 4 4 4-1.5 4-4"/>
+            </svg>
+            Behance
+          </a>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="footer">
+    <span class="footer__logo">Madelyn Janz</span>
+    <span>&copy; <span id="year"></span> Madelyn Janz. All rights reserved.</span>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Auto-update copyright year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>

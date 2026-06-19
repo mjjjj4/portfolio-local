@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Digital Photography — Madelyn Janz</title>
+  <meta name="description" content="Digital photography portfolio by Madelyn Janz." />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       NAVIGATION (same on every page)
+       ============================================================ -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">Madelyn Janz</a>
+      <ul class="nav__links" role="list">
+        <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+        <li class="nav__item">
+          <a href="photography.html" class="nav__link active">
+            Photography
+            <svg viewBox="0 0 24 24" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </a>
+          <div class="nav__dropdown">
+            <a href="#landscapes">Landscapes</a>
+            <a href="#portraits">Portraits</a>
+            <a href="#street">Street</a>
+            <a href="#nature">Nature</a>
+          </div>
+        </li>
+        <li class="nav__item">
+          <a href="architecture.html" class="nav__link">
+            Architecture
+            <svg viewBox="0 0 24 24" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </a>
+          <div class="nav__dropdown">
+            <a href="architecture.html#exterior">Exterior Renders</a>
+            <a href="architecture.html#interior">Interior Renders</a>
+            <a href="architecture.html#conceptual">Conceptual</a>
+          </div>
+        </li>
+        <li class="nav__item">
+          <a href="creations.html" class="nav__link">
+            Digital Creations
+            <svg viewBox="0 0 24 24" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </a>
+          <div class="nav__dropdown">
+            <a href="creations.html#email">Email Campaigns</a>
+            <a href="creations.html#figma">Figma & UI Design</a>
+            <a href="creations.html#branding">Branding</a>
+          </div>
+        </li>
+        <li class="nav__item"><a href="about.html" class="nav__link">About</a></li>
+        <li class="nav__item"><a href="index.html#contact" class="nav__link">Contact</a></li>
+      </ul>
+      <button class="nav__hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <div class="nav__mobile">
+    <a href="index.html" class="nav__mobile-link">Home</a>
+    <div class="nav__mobile-link">Photography</div>
+    <div class="nav__mobile-sub">
+      <a href="#landscapes">Landscapes</a><a href="#portraits">Portraits</a>
+      <a href="#street">Street</a><a href="#nature">Nature</a>
+    </div>
+    <div class="nav__mobile-link">Architecture</div>
+    <div class="nav__mobile-sub">
+      <a href="architecture.html#exterior">Exterior Renders</a>
+      <a href="architecture.html#interior">Interior Renders</a>
+      <a href="architecture.html#conceptual">Conceptual</a>
+    </div>
+    <div class="nav__mobile-link">Digital Creations</div>
+    <div class="nav__mobile-sub">
+      <a href="creations.html#email">Email Campaigns</a>
+      <a href="creations.html#figma">Figma & UI Design</a>
+      <a href="creations.html#branding">Branding</a>
+    </div>
+    <a href="about.html" class="nav__mobile-link">About</a>
+    <a href="index.html#contact" class="nav__mobile-link">Contact</a>
+  </div>
+
+  <!-- ============================================================
+       PAGE HERO
+       SWAP: replace the gradient div with:
+       <img src="images/photography/hero.jpg" alt="Photography" class="gallery-hero__bg" />
+       ============================================================ -->
+  <div class="gallery-page">
+    <div class="gallery-hero">
+      <div class="gallery-hero__bg" style="position:absolute;inset:0;background:linear-gradient(135deg,#0f0824 0%,#1e1040 40%,#0a1428 100%);"></div>
+      <!-- SWAP: <img src="images/photography/hero.jpg" alt="Photography" class="gallery-hero__bg" /> -->
+      <div class="gallery-hero__overlay"></div>
+      <div class="gallery-hero__text">
+        <p class="section-label">Portfolio</p>
+        <h1 class="display-lg">Digital Photography</h1>
+      </div>
+    </div>
+
+    <!-- ============================================================
+         GALLERY — LANDSCAPES
+         HOW TO ADD IMAGES:
+           1. Drop your image file into images/photography/
+           2. Copy a .gallery-item block below
+           3. Set data-src="images/photography/your-file.jpg"
+           4. Set data-alt="Your description"
+           5. For VIDEOS: set data-type="video" and data-src="videos/photography/your-file.mp4"
+              and add class="gallery-item__badge">VIDEO</div> inside the item
+
+         ASPECT RATIO HELPERS:
+           - Default (landscape): class="gallery-item"
+           - Portrait (tall):     class="gallery-item portrait"
+           - Wide/cinematic:      class="gallery-item wide" (spans 2 columns)
+         ============================================================ -->
+    <section class="gallery-section" id="landscapes">
+      <div class="container">
+        <p class="section-label reveal">Landscapes</p>
+        <h2 class="display-md reveal delay-1" style="margin-bottom:2.5rem;">Wide Open Spaces</h2>
+
+        <div class="gallery-grid">
+
+          <!-- SWAP: replace style with your real image via data-src -->
+          <div class="gallery-item wide reveal"
+               data-src="images/photography/landscape-1.jpg"
+               data-type="image"
+               data-alt="Landscape 1"
+               role="button" tabindex="0" aria-label="View Landscape 1">
+            <div class="gallery-item__media" style="background:linear-gradient(135deg,#0f0824,#1e3a5f,#0a1428);width:100%;height:100%;"></div>
+            <!-- SWAP: <img src="images/photography/landscape-1.jpg" alt="Landscape 1" class="gallery-item__media" /> -->
+            <div class="gallery-item__overlay">
+              <div class="gallery-item__icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                  <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                  <line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item reveal delay-1"
+               data-src="images/photography/landscape-2.jpg"
+               data-type="image" data-alt="Landscape 2"
+               role="button" tabindex="0" aria-label="View Landscape 2">
+            <div class="gallery-item__media" style="background:linear-gradient(135deg,#0a1428,#2d1458,#0a1428);width:100%;height:100%;"></div>
+            <div class="gallery-item__overlay"><div class="gallery-item__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div></div>
+          </div>
+
+          <div class="gallery-item portrait reveal delay-2"
+               data-src="images/photography/landscape-3.jpg"
+               data-type="image" data-alt="Landscape 3"
+               role="button" tabindex="0" aria-label="View Landscape 3">
+            <div class="gallery-item__media" style="background:linear-gradient(135deg,#1a0a3a,#0a2040,#1a0000);width:100%;height:100%;"></div>
+            <div class="gallery-item__overlay"><div class="gallery-item__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div></div>
+          </div>
+
+          <div class="gallery-item reveal delay-3"
+               data-src="images/photography/landscape-4.jpg"
+               data-type="image" data-alt="Landscape 4"
+               role="button" tabindex="0" aria-label="View Landscape 4">
+            <div class="gallery-item__media" style="background:linear-gradient(135deg,#0a2040,#1a0040,#0a0a28);width:100%;height:100%;"></div>
+            <div class="gallery-item__overlay"><div class="gallery-item__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div></div>
+          </div>
+
+          <!-- VIDEO EXAMPLE — SWAP data-src with your actual video file -->
+          <div class="gallery-item reveal"
+               data-src="videos/photography/timelapse-1.mp4"
+               data-type="video" data-alt="Timelapse"
+               role="button" tabindex="0" aria-label="Play Timelapse">
+            <div class="gallery-item__media" style="background:linear-gradient(135deg,#1a0020,#0a1040,#200a00);width:100%;height:100%;"></div>
+            <div class="gallery-item__badge">VIDEO</div>
+            <div class="gallery-item__overlay"><div class="gallery-item__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="white" stroke="none"><polygon points="5,3 19,12 5,21"/></svg>
+            </div></div>
+          </div>
+
+          <div class="gallery-item reveal delay-1"
+               data-src="images/photography/landscape-5.jpg"
+               data-type="image" data-alt="Landscape 5"
+               role="button" tabindex="0" aria-label="View Landscape 5">
+            <div class="gallery-item__media" style="background:linear-gradient(135deg,#1a0010,#0a1a30,#0a0020);width:100%;height:100%;"></div>
+            <div class="gallery-item__overlay"><div class="gallery-item__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div></div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PORTRAITS -->
+    <section class="gallery-section" id="portraits" style="padding-top:0;">
+      <div class="container">
+        <p class="section-label reveal">Portraits</p>
+        <h2 class="display-md reveal delay-1" style="margin-bottom:2.5rem;">People &amp; Moments</h2>
+        <div class="gallery-grid">
+
+          <div class="gallery-item portrait reveal"
+               data-src="images/photography/portrait-1.jpg"
+               data-type="image" data-alt="Portrait 1"
+               role="button" tabindex="0">
+            <div class="gallery-item__media" style="background:linear-gradient(160deg,#1a0040,#0a0a28);width:100%;height:100%;"></div>
+            <div class="gallery-item__overlay"><div class="gallery-item__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div></div>
+          </div>
+
+          <div class="gallery-item portrait reveal delay-1"
+               data-src="images/photography/portrait-2.jpg"
+               data-type="image" data-alt="Portrait 2"
+               role="button" tabindex="0">
+            <div class="gallery-item__media" style="background:linear-gradient(160deg,#200a30,#0a1830);width:100%;height:100%;"></div>
+            <div class="gallery-item__overlay"><div class="gallery-item__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div></div>
+          </div>
+
+          <div class="gallery-item portrait reveal delay-2"
+               data-src="images/photography/portrait-3.jpg"
+               data-type="image" data-alt="Portrait 3"
+               role="button" tabindex="0">
+            <div class="gallery-item__media" style="background:linear-gradient(160deg,#0a1428,#2a0a10);width:100%;height:100%;"></div>
+            <div class="gallery-item__overlay"><div class="gallery-item__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div></div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- STREET -->
+    <section class="gallery-section" id="street" style="padding-top:0;">
+      <div class="container">
+        <p class="section-label reveal">Street</p>
+        <h2 class="display-md reveal delay-1" style="margin-bottom:2.5rem;">Urban Stories</h2>
+        <div class="gallery-grid">
+
+          <div class="gallery-item reveal"
+               data-src="images/photography/street-1.jpg"
+               data-type="image" data-alt="Street 1" role="button" tabindex="0">
+            <div class="gallery-item__media" style="background:linear-gradient(135deg,#0a0a14,#1a0a28,#0a0a14);width:100%;height:100%;"></div>
+            <div class="gallery-item__overlay"><div class="gallery-item__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div></div>
+          </div>
+
+          <div class="gallery-item wide reveal delay-1"
+               data-src="images/photography/street-2.jpg"
+               data-type="image" data-alt="Street 2" role="button" tabindex="0">
+            <div class="gallery-item__media" style="background:linear-gradient(135deg,#0a1428,#0a0a20,#1a0028);width:100%;height:100%;"></div>
+            <div class="gallery-item__overlay"><div class="gallery-item__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div></div>
+          </div>
+
+          <div class="gallery-item reveal delay-2"
+               data-src="images/photography/street-3.jpg"
+               data-type="image" data-alt="Street 3" role="button" tabindex="0">
+            <div class="gallery-item__media" style="background:linear-gradient(135deg,#200010,#0a0a28);width:100%;height:100%;"></div>
+            <div class="gallery-item__overlay"><div class="gallery-item__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div></div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- NATURE -->
+    <section class="gallery-section" id="nature" style="padding-top:0;">
+      <div class="container">
+        <p class="section-label reveal">Nature</p>
+        <h2 class="display-md reveal delay-1" style="margin-bottom:2.5rem;">The Natural World</h2>
+        <div class="gallery-grid">
+
+          <div class="gallery-item reveal"
+               data-src="images/photography/nature-1.jpg"
+               data-type="image" data-alt="Nature 1" role="button" tabindex="0">
+            <div class="gallery-item__media" style="background:linear-gradient(135deg,#001a10,#0a1428,#001420);width:100%;height:100%;"></div>
+            <div class="gallery-item__overlay"><div class="gallery-item__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div></div>
+          </div>
+
+          <div class="gallery-item portrait reveal delay-1"
+               data-src="images/photography/nature-2.jpg"
+               data-type="image" data-alt="Nature 2" role="button" tabindex="0">
+            <div class="gallery-item__media" style="background:linear-gradient(135deg,#001820,#0a1028,#001418);width:100%;height:100%;"></div>
+            <div class="gallery-item__overlay"><div class="gallery-item__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div></div>
+          </div>
+
+          <div class="gallery-item reveal delay-2"
+               data-src="images/photography/nature-3.jpg"
+               data-type="image" data-alt="Nature 3" role="button" tabindex="0">
+            <div class="gallery-item__media" style="background:linear-gradient(135deg,#0a1420,#001010,#0a0828);width:100%;height:100%;"></div>
+            <div class="gallery-item__overlay"><div class="gallery-item__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div></div>
+          </div>
+
+          <div class="gallery-item wide reveal delay-3"
+               data-src="images/photography/nature-4.jpg"
+               data-type="image" data-alt="Nature 4" role="button" tabindex="0">
+            <div class="gallery-item__media" style="background:linear-gradient(135deg,#001428,#001810,#0a0828);width:100%;height:100%;"></div>
+            <div class="gallery-item__overlay"><div class="gallery-item__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div></div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </div><!-- /.gallery-page -->
+
+  <!-- ============================================================
+       LIGHTBOX
+       ============================================================ -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+    <button class="lightbox__close" aria-label="Close">
+      <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <button class="lightbox__arrow lightbox__arrow--prev" aria-label="Previous">
+      <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+    </button>
+    <div class="lightbox__media-wrap"></div>
+    <button class="lightbox__arrow lightbox__arrow--next" aria-label="Next">
+      <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+    </button>
+    <div class="lightbox__counter"></div>
+  </div>
+
+  <footer class="footer">
+    <span class="footer__logo">Madelyn Janz</span>
+    <span>&copy; <span id="year"></span> Madelyn Janz. All rights reserved.</span>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Email &amp; Figma Creations — Madelyn Janz</title>
+  <meta name="description" content="Email campaigns and Figma UI design portfolio by Madelyn Janz." />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">Madelyn Janz</a>
+      <ul class="nav__links" role="list">
+        <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+        <li class="nav__item">
+          <a href="photography.html" class="nav__link">Photography
+            <svg viewBox="0 0 24 24" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </a>
+          <div class="nav__dropdown">
+            <a href="photography.html#landscapes">Landscapes</a>
+            <a href="photography.html#portraits">Portraits</a>
+            <a href="photography.html#street">Street</a>
+            <a href="photography.html#nature">Nature</a>
+          </div>
+        </li>
+        <li class="nav__item">
+          <a href="architecture.html" class="nav__link">Architecture
+            <svg viewBox="0 0 24 24" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </a>
+          <div class="nav__dropdown">
+            <a href="architecture.html#exterior">Exterior Renders</a>
+            <a href="architecture.html#interior">Interior Renders</a>
+            <a href="architecture.html#conceptual">Conceptual</a>
+          </div>
+        </li>
+        <li class="nav__item">
+          <a href="creations.html" class="nav__link active">Digital Creations
+            <svg viewBox="0 0 24 24" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </a>
+          <div class="nav__dropdown">
+            <a href="#email">Email Campaigns</a>
+            <a href="#figma">Figma & UI Design</a>
+            <a href="#branding">Branding</a>
+          </div>
+        </li>
+        <li class="nav__item"><a href="about.html" class="nav__link">About</a></li>
+        <li class="nav__item"><a href="index.html#contact" class="nav__link">Contact</a></li>
+      </ul>
+      <button class="nav__hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <div class="nav__mobile">
+    <a href="index.html" class="nav__mobile-link">Home</a>
+    <div class="nav__mobile-link">Photography</div>
+    <div class="nav__mobile-sub">
+      <a href="photography.html#landscapes">Landscapes</a><a href="photography.html#portraits">Portraits</a>
+      <a href="photography.html#street">Street</a><a href="photography.html#nature">Nature</a>
+    </div>
+    <div class="nav__mobile-link">Architecture</div>
+    <div class="nav__mobile-sub">
+      <a href="architecture.html#exterior">Exterior Renders</a>
+      <a href="architecture.html#interior">Interior Renders</a>
+      <a href="architecture.html#conceptual">Conceptual</a>
+    </div>
+    <div class="nav__mobile-link">Digital Creations</div>
+    <div class="nav__mobile-sub">
+      <a href="#email">Email Campaigns</a>
+      <a href="#figma">Figma & UI Design</a>
+      <a href="#branding">Branding</a>
+    </div>
+    <a href="about.html" class="nav__mobile-link">About</a>
+    <a href="index.html#contact" class="nav__mobile-link">Contact</a>
+  </div>
+
+  <div class="gallery-page">
+
+    <!-- Page hero -->
+    <!-- SWAP: <img src="images/creations/hero.jpg" alt="Digital Creations" class="gallery-hero__bg" /> -->
+    <div class="gallery-hero">
+      <div class="gallery-hero__bg" style="position:absolute;inset:0;background:linear-gradient(135deg,#1a0800 0%,#0a0014 50%,#001a14 100%);"></div>
+      <div class="gallery-hero__overlay"></div>
+      <div class="gallery-hero__text">
+        <p class="section-label">Portfolio</p>
+        <h1 class="display-lg">Email &amp; Figma Creations</h1>
+      </div>
+    </div>
+
+    <!-- ============================================================
+         EMAIL CAMPAIGNS
+         SWAP: replace gradient divs with real screenshots/images
+         via data-src on each .gallery-item
+         ============================================================ -->
+    <section class="gallery-section" id="email">
+      <div class="container">
+        <p class="section-label reveal">Email Design</p>
+        <h2 class="display-md reveal delay-1" style="margin-bottom:2.5rem;">Email Campaigns</h2>
+        <div class="gallery-grid">
+
+          <!-- Email designs look best as portrait (tall) since emails are vertical -->
+          <div class="gallery-item portrait reveal"
+               data-src="images/creations/email-1.jpg"
+               data-type="image" data-alt="Email Campaign 1"
+               role="button" tabindex="0">
+            <div class="gallery-item__media" style="background:linear-gradient(160deg,#1a0800,#0a0014,#001a14);width:100%;height:100%;"></div>
+            <div class="gallery-item__overlay"><div class="gallery-item__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div></div>
+          </div>
+
+          <div class="gallery-item portrait reveal delay-1"
+               data-src="images/creations/email-2.jpg"
+               data-type="image" data-alt="Email Campaign 2"
+               role="button" tabindex="0">
+            <div class="gallery-item__media" style="background:linear-gradient(160deg,#0a0014,#1a0800,#0a1014);width:100%;height:100%;"></div>
+            <div class="gallery-item__overlay"><div class="gallery-item__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div></div>
+          </div>
+
+          <div class="gallery-item portrait reveal delay-2"
+               data-src="images/creations/email-3.jpg"
+               data-type="image" data-alt="Email Campaign 3"
+               role="button" tabindex="0">
+            <div class="gallery-item__media" style="background:linear-gradient(160deg,#001a14,#0a0014,#1a0800);width:100%;height:100%;"></div>
+            <div class="gallery-item__overlay"><div class="gallery-item__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div></div>
+          </div>
+
+          <div class="gallery-item portrait reveal delay-3"
+               data-src="images/creations/email-4.jpg"
+               data-type="image" data-alt="Email Campaign 4"
+               role="button" tabindex="0">
+            <div class="gallery-item__media" style="background:linear-gradient(160deg,#0a1014,#1a0800,#001a10);width:100%;height:100%;"></div>
+            <div class="gallery-item__overlay"><div class="gallery-item__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div></div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FIGMA & UI DESIGN -->
+    <section class="gallery-section" id="figma" style="padding-top:0;">
+      <div class="container">
+        <p class="section-label reveal">UI / UX</p>
+        <h2 class="display-md reveal delay-1" style="margin-bottom:2.5rem;">Figma &amp; UI Design</h2>
+        <div class="gallery-grid">
+
+          <!-- UI screens look best as wide/landscape -->
+          <div class="gallery-item wide reveal"
+               data-src="images/creations/figma-1.jpg"
+               data-type="image" data-alt="Figma Design 1"
+               role="button" tabindex="0">
+            <div class="gallery-item__media" style="background:linear-gradient(135deg,#0a0014,#200a00,#001428);width:100%;height:100%;"></div>
+            <div class="gallery-item__overlay"><div class="gallery-item__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div></div>
+          </div>
+
+          <div class="gallery-item reveal delay-1"
+               data-src="images/creations/figma-2.jpg"
+               data-type="image" data-alt="Figma Design 2"
+               role="button" tabindex="0">
+            <div class="gallery-item__media" style="background:linear-gradient(135deg,#200a00,#0a0014,#001418);width:100%;height:100%;"></div>
+            <div class="gallery-item__overlay"><div class="gallery-item__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div></div>
+          </div>
+
+          <div class="gallery-item reveal delay-2"
+               data-src="images/creations/figma-3.jpg"
+               data-type="image" data-alt="Figma Design 3"
+               role="button" tabindex="0">
+            <div class="gallery-item__media" style="background:linear-gradient(135deg,#001418,#200a00,#0a0014);width:100%;height:100%;"></div>
+            <div class="gallery-item__overlay"><div class="gallery-item__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div></div>
+          </div>
+
+          <div class="gallery-item wide reveal"
+               data-src="images/creations/figma-4.jpg"
+               data-type="image" data-alt="Figma Design 4"
+               role="button" tabindex="0">
+            <div class="gallery-item__media" style="background:linear-gradient(135deg,#0a0028,#1a0800,#001428);width:100%;height:100%;"></div>
+            <div class="gallery-item__overlay"><div class="gallery-item__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div></div>
+          </div>
+
+          <!-- Prototype/demo video example -->
+          <div class="gallery-item reveal delay-1"
+               data-src="videos/creations/prototype-demo.mp4"
+               data-type="video" data-alt="Prototype Demo"
+               role="button" tabindex="0">
+            <div class="gallery-item__media" style="background:linear-gradient(135deg,#1a0028,#0a1400,#001428);width:100%;height:100%;"></div>
+            <div class="gallery-item__badge">VIDEO</div>
+            <div class="gallery-item__overlay"><div class="gallery-item__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="white" stroke="none"><polygon points="5,3 19,12 5,21"/></svg>
+            </div></div>
+          </div>
+
+          <div class="gallery-item reveal delay-2"
+               data-src="images/creations/figma-5.jpg"
+               data-type="image" data-alt="Figma Design 5"
+               role="button" tabindex="0">
+            <div class="gallery-item__media" style="background:linear-gradient(135deg,#001428,#1a0028,#200a00);width:100%;height:100%;"></div>
+            <div class="gallery-item__overlay"><div class="gallery-item__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div></div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- BRANDING -->
+    <section class="gallery-section" id="branding" style="padding-top:0;">
+      <div class="container">
+        <p class="section-label reveal">Branding</p>
+        <h2 class="display-md reveal delay-1" style="margin-bottom:2.5rem;">Brand Identity</h2>
+        <div class="gallery-grid">
+
+          <div class="gallery-item reveal"
+               data-src="images/creations/brand-1.jpg"
+               data-type="image" data-alt="Branding 1" role="button" tabindex="0">
+            <div class="gallery-item__media" style="background:linear-gradient(135deg,#1a0000,#0a0014,#001814);width:100%;height:100%;"></div>
+            <div class="gallery-item__overlay"><div class="gallery-item__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div></div>
+          </div>
+
+          <div class="gallery-item reveal delay-1"
+               data-src="images/creations/brand-2.jpg"
+               data-type="image" data-alt="Branding 2" role="button" tabindex="0">
+            <div class="gallery-item__media" style="background:linear-gradient(135deg,#0a0014,#1a0800,#001414);width:100%;height:100%;"></div>
+            <div class="gallery-item__overlay"><div class="gallery-item__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div></div>
+          </div>
+
+          <div class="gallery-item reveal delay-2"
+               data-src="images/creations/brand-3.jpg"
+               data-type="image" data-alt="Branding 3" role="button" tabindex="0">
+            <div class="gallery-item__media" style="background:linear-gradient(135deg,#001414,#0a0014,#1a0400);width:100%;height:100%;"></div>
+            <div class="gallery-item__overlay"><div class="gallery-item__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div></div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </div><!-- /.gallery-page -->
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+    <button class="lightbox__close" aria-label="Close">
+      <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <button class="lightbox__arrow lightbox__arrow--prev" aria-label="Previous">
+      <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+    </button>
+    <div class="lightbox__media-wrap"></div>
+    <button class="lightbox__arrow lightbox__arrow--next" aria-label="Next">
+      <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+    </button>
+    <div class="lightbox__counter"></div>
+  </div>
+
+  <footer class="footer">
+    <span class="footer__logo">Madelyn Janz</span>
+    <span>&copy; <span id="year"></span> Madelyn Janz. All rights reserved.</span>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
