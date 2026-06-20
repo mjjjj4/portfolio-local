@@ -1,0 +1,17 @@
+Drop your licensed Canela .woff2 files into this folder.
+
+The CSS expects these exact filenames:
+  Canela-Light-Web.woff2
+  Canela-Regular-Web.woff2
+  Canela-Medium-Web.woff2
+  Canela-Bold-Web.woff2
+  Canela-Black-Web.woff2
+
+Where to get Canela:
+  - Purchase: https://commercialtype.com/catalog/canela
+  - Adobe Fonts (Typekit subscription): search "Canela" and activate it,
+    then add your kit's <link> tag to each HTML <head> instead of using
+    the @font-face blocks in styles.css.
+
+Until the font files are present, the site falls back to Didot / Bodoni MT /
+Playfair Display / Georgia — all elegant serifs in the same editorial spirit.

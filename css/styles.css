@@ -3,6 +3,57 @@
    Color palette: deep dark bg + sunset purples, blues, oranges
    ============================================================ */
 
+/* ---------- Fonts ---------- */
+
+/*
+  CANELA (Commercial Type) — headings, nav, labels, UI text
+  License & download: https://commercialtype.com/catalog/canela
+  After purchasing, drop the .woff2 files into a /fonts/ folder
+  and uncomment the @font-face blocks below.
+
+  If you have an Adobe Fonts (Typekit) subscription, add your
+  kit's <link> tag to each HTML <head> instead and remove the
+  @font-face blocks — Canela is available there as well.
+*/
+@font-face {
+  font-family: 'Canela';
+  src: url('../fonts/Canela-Light-Web.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Canela';
+  src: url('../fonts/Canela-Regular-Web.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Canela';
+  src: url('../fonts/Canela-Medium-Web.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Canela';
+  src: url('../fonts/Canela-Bold-Web.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Canela';
+  src: url('../fonts/Canela-Black-Web.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Cormorant Garamond — body copy (free via Google Fonts) */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap');
+
 /* ---------- CSS Variables ---------- */
 :root {
   --bg-deep:       #08080f;
@@ -42,9 +93,24 @@ html { scroll-behavior: smooth; font-size: 16px; }
 body {
   background-color: var(--bg-deep);
   color: var(--text-white);
-  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  font-family: 'Cormorant Garamond', 'Georgia', serif;
   line-height: 1.6;
   overflow-x: hidden;
+}
+
+/* All headings and UI elements use Canela; falls back to a serif until font files are added */
+h1, h2, h3, h4, h5, h6,
+.display-xl, .display-lg, .display-md,
+.nav__logo, .nav__link, .nav__dropdown a,
+.nav__mobile-link, .nav__mobile-sub a,
+.section-label, .hero__tagline, .hero__name,
+.category-tile__name, .category-tile__label, .category-tile__arrow,
+.gallery-hero__text h1, .gallery-hero__text .section-label,
+.about-text__title, .skill-card__name,
+.contact__title, .footer__logo,
+.btn, .social-btn, .gallery-item__badge,
+.lightbox__counter {
+  font-family: 'Canela', 'Didot', 'Bodoni MT', 'Playfair Display', 'Georgia', serif;
 }
 
 img, video { display: block; max-width: 100%; }
@@ -72,10 +138,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
 }
 
 .gradient-text {
-  background: var(--gradient-accent);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--text-white);
 }
 
 /* ---------- Utility ---------- */
@@ -156,12 +219,9 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
 
 .nav__logo {
   font-size: 1.4rem;
-  font-weight: 900;
-  letter-spacing: -0.03em;
-  background: var(--gradient-accent);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  color: var(--text-white);
   white-space: nowrap;
 }
 
@@ -969,12 +1029,10 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
 }
 
 .footer__logo {
-  font-weight: 800;
+  font-weight: 400;
   font-size: 1rem;
-  background: var(--gradient-accent);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  letter-spacing: 0.04em;
+  color: var(--text-white);
 }
 
 /* ============================================================
