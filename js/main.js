@@ -57,8 +57,7 @@
 
   const slides = Array.from(slideshow.querySelectorAll('.slide'));
   const dots   = Array.from(slideshow.querySelectorAll('.slideshow__dot'));
-  const prevBtn = slideshow.querySelector('.slideshow__arrow--prev');
-  const nextBtn = slideshow.querySelector('.slideshow__arrow--next');
+  const nextBtn = slideshow.querySelector('.slideshow__next');
 
   if (!slides.length) return;
 
@@ -85,7 +84,6 @@
   goTo(0);
   startTimer();
 
-  prevBtn?.addEventListener('click', () => { prev(); startTimer(); });
   nextBtn?.addEventListener('click', () => { next(); startTimer(); });
 
   dots.forEach((dot, i) => {

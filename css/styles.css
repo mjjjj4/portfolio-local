@@ -342,52 +342,58 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
 }
 
 /* Slideshow controls */
-.slideshow__arrow {
+.slideshow__controls {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 10;
-  width: 52px;
-  height: 52px;
-  border-radius: 50%;
-  background: rgba(8,8,15,0.6);
-  border: 1px solid rgba(255,255,255,0.15);
+  bottom: 7rem;
+  left: 0;
+  right: 0;
+  padding: 0 2rem;
   display: flex;
   align-items: center;
-  justify-content: center;
-  backdrop-filter: blur(10px);
-  transition: background 0.2s, border-color 0.2s, box-shadow 0.2s;
+  justify-content: space-between;
+  z-index: 10;
+  pointer-events: none;
 }
-.slideshow__arrow:hover {
-  background: rgba(168, 85, 247, 0.4);
-  border-color: var(--purple);
-  box-shadow: var(--shadow-glow-purple);
-}
-.slideshow__arrow--prev { left: 1.5rem; }
-.slideshow__arrow--next { right: 1.5rem; }
-.slideshow__arrow svg { width: 20px; height: 20px; stroke: white; fill: none; stroke-width: 2; }
 
 .slideshow__dots {
-  position: absolute;
-  bottom: 8rem;
-  left: 50%;
-  transform: translateX(-50%);
   display: flex;
   gap: 10px;
-  z-index: 10;
+  pointer-events: all;
 }
 .slideshow__dot {
   width: 8px;
   height: 8px;
-  border-radius: 50%;
-  background: rgba(255,255,255,0.35);
-  transition: background 0.3s, transform 0.3s, width 0.3s;
   border-radius: 4px;
+  background: rgba(0,0,0,0.45);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.5), inset 0 0 0 1px rgba(255,255,255,0.18);
+  transition: background 0.3s, width 0.3s, box-shadow 0.3s;
 }
 .slideshow__dot.active {
-  background: var(--orange);
+  background: rgba(0,0,0,0.75);
   width: 28px;
-  box-shadow: 0 0 12px var(--orange);
+  box-shadow: 0 1px 6px rgba(0,0,0,0.6), inset 0 0 0 1px rgba(255,255,255,0.25);
+}
+
+.slideshow__next {
+  pointer-events: all;
+  background: none;
+  border: none;
+  padding: 0;
+  line-height: 1;
+  color: rgba(255,255,255,0.9);
+  filter: drop-shadow(0 1px 3px rgba(0,0,0,0.7));
+  transition: color 0.2s, filter 0.2s, transform 0.2s;
+  cursor: pointer;
+}
+.slideshow__next:hover {
+  color: #fff;
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,0.9));
+  transform: translateX(3px);
+}
+.slideshow__next svg {
+  width: 26px;
+  height: 26px;
+  display: block;
 }
 
 /* Hero text */

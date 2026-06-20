@@ -76,18 +76,17 @@
       </div>
 
 
-      <!-- Arrow controls -->
-      <button class="slideshow__arrow slideshow__arrow--prev" aria-label="Previous slide">
-        <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
-      </button>
-      <button class="slideshow__arrow slideshow__arrow--next" aria-label="Next slide">
-        <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
-      </button>
-
-      <!-- Navigation dots -->
-      <div class="slideshow__dots" aria-label="Slide navigation">
-        <button class="slideshow__dot active" aria-label="Slide 1"></button>
-        <button class="slideshow__dot" aria-label="Slide 2"></button>
+      <!-- Bottom controls: dots + next arrow -->
+      <div class="slideshow__controls">
+        <div class="slideshow__dots" aria-label="Slide navigation">
+          <button class="slideshow__dot active" aria-label="Slide 1"></button>
+          <button class="slideshow__dot" aria-label="Slide 2"></button>
+        </div>
+        <button class="slideshow__next" aria-label="Next slide">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6"/>
+          </svg>
+        </button>
       </div>
 
       <!-- Hero text overlay -->
