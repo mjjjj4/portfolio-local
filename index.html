@@ -14,6 +14,47 @@
 <body>
 
   <!-- ============================================================
+       SVG FILTER — topographic warp for hero name
+       feTurbulence generates organic noise; feDisplacementMap
+       uses that noise to push pixels sideways, turning straight
+       gradient stripes into topographic contour curves.
+       Two <animate> durations (19s, 43s) are coprime — they drift
+       apart forever so the warp pattern never repeats.
+       ============================================================ -->
+  <svg aria-hidden="true" focusable="false"
+       style="position:absolute;width:0;height:0;overflow:hidden;pointer-events:none;">
+    <defs>
+      <filter id="topo-warp" color-interpolation-filters="sRGB"
+              x="-25%" y="-25%" width="150%" height="150%">
+        <feTurbulence type="turbulence"
+                      baseFrequency="0.007 0.0045"
+                      numOctaves="4"
+                      seed="5"
+                      result="waveNoise">
+          <!-- Morphs wave shape: medium pace, smooth easing -->
+          <animate attributeName="baseFrequency"
+                   values="0.007 0.0045;0.011 0.007;0.006 0.010;0.009 0.005;0.008 0.009;0.007 0.0045"
+                   dur="19s"
+                   repeatCount="indefinite"
+                   calcMode="spline"
+                   keyTimes="0;0.2;0.4;0.6;0.8;1"
+                   keySplines="0.45 0 0.55 1;0.45 0 0.55 1;0.45 0 0.55 1;0.45 0 0.55 1;0.45 0 0.55 1"/>
+          <!-- Shifts which noise landscape is used — different prime duration -->
+          <animate attributeName="seed"
+                   values="5;13;7;19;11;3;5"
+                   dur="43s"
+                   repeatCount="indefinite"/>
+        </feTurbulence>
+        <!-- scale="13": distorts stripes into curves; bold 7rem text stays legible -->
+        <feDisplacementMap in="SourceGraphic" in2="waveNoise"
+                           scale="13"
+                           xChannelSelector="R"
+                           yChannelSelector="G"/>
+      </filter>
+    </defs>
+  </svg>
+
+  <!-- ============================================================
        NAVIGATION
        ============================================================ -->
   <nav class="nav" role="navigation" aria-label="Main navigation">
