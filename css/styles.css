@@ -30,7 +30,7 @@
 
   --gradient-hero: linear-gradient(135deg, var(--purple-dark) 0%, var(--blue-dark) 50%, var(--orange-dark) 100%);
   --gradient-accent: linear-gradient(90deg, var(--purple) 0%, var(--blue) 50%, var(--orange) 100%);
-  --gradient-blue: linear-gradient(90deg, #67e8f9 0%, #22d3ee 40%, #3b82f6 100%);
+  --gradient-blue: linear-gradient(90deg, #0a1a4a 0%, #1e4d8c 40%, #60b8f5 100%);
   --gradient-card: linear-gradient(180deg, transparent 40%, rgba(8,8,15,0.95) 100%);
 
   --transition-smooth: cubic-bezier(0.4, 0, 0.2, 1);
@@ -995,11 +995,11 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
 .btn:hover { transform: translateY(-2px); }
 
 .btn--primary {
-  background: var(--gradient-accent);
+  background: var(--gradient-blue);
   color: white;
-  box-shadow: 0 4px 24px rgba(168,85,247,0.35);
+  box-shadow: 0 4px 24px rgba(30, 77, 140, 0.45);
 }
-.btn--primary:hover { box-shadow: 0 8px 32px rgba(168,85,247,0.55); }
+.btn--primary:hover { box-shadow: 0 8px 32px rgba(96, 184, 245, 0.4); }
 
 .btn--outline {
   border: 1px solid rgba(255,255,255,0.2);
