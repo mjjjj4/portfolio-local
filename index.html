@@ -159,16 +159,6 @@
       <!-- Hero text overlay -->
       <div class="hero__text">
         <p class="hero__tagline">Creative Portfolio</p>
-        <!--
-          SVG TOPO TEXT
-          How it works:
-            1. <clipPath> holds the text shapes — never rendered, used only as a mask
-            2. A <rect> fills the clip area with the animated stripe pattern
-            3. feTurbulence + feDisplacementMap warps the stripes into curves ON THE RECT,
-               BEFORE the clip is applied → letter edges stay razor-sharp
-            4. Three independent timers (19s baseFreq, 43s seed, 16s translate)
-               are coprime so the pattern never repeats
-        -->
         <h1 class="hero__name" aria-label="Madelyn Janz">
           <svg class="hero__name-svg"
                viewBox="0 0 1000 285"
@@ -177,60 +167,67 @@
                aria-hidden="true" focusable="false">
             <defs>
 
-              <!-- Warp filter: turns straight stripes into organic curves -->
-              <filter id="topo-warp" color-interpolation-filters="sRGB"
-                      x="-15%" y="-30%" width="130%" height="160%">
-                <feTurbulence type="turbulence"
-                              baseFrequency="0.008 0.005"
+              <!--
+                Lava-lamp gradient technique:
+                  1. feTurbulence(fractalNoise) → feColorMatrix maps organic noise
+                     to the navy→light-blue palette (no lines, pure smooth gradient).
+                  2. A second feTurbulence feeds feDisplacementMap, which spatially
+                     warps the colored blobs — different regions move at different speeds.
+                  3. Two coprime durations (31s color, 19s warp) prevent repetition.
+                  4. <clipPath> keeps letter edges razor-sharp throughout.
+              -->
+              <filter id="lava-flow" x="-20%" y="-40%" width="140%" height="180%"
+                      color-interpolation-filters="sRGB">
+
+                <!-- Color layer: large slow-moving blobs of navy→light-blue -->
+                <feTurbulence type="fractalNoise"
+                              baseFrequency="0.0032 0.0050"
                               numOctaves="4"
-                              seed="5"
-                              result="waveNoise">
+                              seed="11"
+                              result="colorNoise">
                   <animate attributeName="baseFrequency"
-                           values="0.008 0.005;0.012 0.008;0.007 0.011;0.010 0.006;0.009 0.010;0.008 0.005"
+                           values="0.0032 0.0050;0.0050 0.0032;0.0026 0.0064;0.0055 0.0040;0.0038 0.0058;0.0032 0.0050"
+                           dur="31s" repeatCount="indefinite"
+                           calcMode="spline"
+                           keyTimes="0;0.2;0.4;0.6;0.8;1"
+                           keySplines="0.45 0 0.55 1;0.45 0 0.55 1;0.45 0 0.55 1;0.45 0 0.55 1;0.45 0 0.55 1"/>
+                </feTurbulence>
+
+                <!--
+                  feColorMatrix remaps fractalNoise R channel (0→1) to the palette:
+                    R=0 → navy    #0a1a4a = (0.039, 0.102, 0.290)
+                    R=1 → lblue   #93c5fd = (0.576, 0.773, 0.992)
+                  Matrix column order: [R in, G in, B in, A in, bias]
+                -->
+                <feColorMatrix type="matrix" in="colorNoise"
+                               values="0.537 0 0 0 0.039
+                                       0.671 0 0 0 0.102
+                                       0.702 0 0 0 0.290
+                                       0     0 0 0 1"
+                               result="coloredBlobs"/>
+
+                <!-- Warp layer: faster, finer noise displaces the colored blobs -->
+                <feTurbulence type="fractalNoise"
+                              baseFrequency="0.0055 0.0085"
+                              numOctaves="3"
+                              seed="5"
+                              result="warpNoise">
+                  <animate attributeName="baseFrequency"
+                           values="0.0055 0.0085;0.0085 0.0055;0.0045 0.0105;0.0075 0.0068;0.0062 0.0092;0.0055 0.0085"
                            dur="19s" repeatCount="indefinite"
                            calcMode="spline"
                            keyTimes="0;0.2;0.4;0.6;0.8;1"
                            keySplines="0.45 0 0.55 1;0.45 0 0.55 1;0.45 0 0.55 1;0.45 0 0.55 1;0.45 0 0.55 1"/>
-                  <animate attributeName="seed"
-                           values="5;13;7;19;11;3;5"
-                           dur="43s" repeatCount="indefinite"/>
                 </feTurbulence>
-                <feDisplacementMap in="SourceGraphic" in2="waveNoise"
-                                   scale="22"
+
+                <!-- Spatial displacement: makes blobs flow and move at varying speeds -->
+                <feDisplacementMap in="coloredBlobs" in2="warpNoise"
+                                   scale="95"
                                    xChannelSelector="R" yChannelSelector="G"/>
+
               </filter>
 
-              <!-- Topographic stripe pattern: thin lines cycling dark navy → light blue -->
-              <pattern id="topo-lines"
-                       width="42" height="42"
-                       patternUnits="userSpaceOnUse"
-                       patternTransform="rotate(28)">
-                <!-- base fill (matches site background) -->
-                <rect fill="#020d24" width="42" height="42"/>
-                <!-- lines, each 2px, cycling darkest→lightest→darkest -->
-                <rect fill="#091f52" y="0"  width="42" height="1.5"/>
-                <rect fill="#1a3a7a" y="6"  width="42" height="1.5"/>
-                <rect fill="#1e4d8c" y="12" width="42" height="1.5"/>
-                <rect fill="#2563eb" y="18" width="42" height="1.5"/>
-                <rect fill="#4a90d9" y="24" width="42" height="1.5"/>
-                <rect fill="#60b8f5" y="30" width="42" height="1.5"/>
-                <rect fill="#93c5fd" y="36" width="42" height="1.5"/>
-                <!-- independent drift animation -->
-                <animate attributeName="x"
-                         values="0;20;11;-16;6;0"
-                         dur="16s" repeatCount="indefinite"
-                         calcMode="spline"
-                         keyTimes="0;0.2;0.4;0.6;0.8;1"
-                         keySplines="0.45 0 0.55 1;0.45 0 0.55 1;0.45 0 0.55 1;0.45 0 0.55 1;0.45 0 0.55 1"/>
-                <animate attributeName="y"
-                         values="0;9;28;18;-11;0"
-                         dur="16s" repeatCount="indefinite"
-                         calcMode="spline"
-                         keyTimes="0;0.2;0.4;0.6;0.8;1"
-                         keySplines="0.45 0 0.55 1;0.45 0 0.55 1;0.45 0 0.55 1;0.45 0 0.55 1;0.45 0 0.55 1"/>
-              </pattern>
-
-              <!-- Text clip path — letter shapes only, never rendered visually -->
+              <!-- Text clip path: letter geometry only, never rendered directly -->
               <clipPath id="name-clip">
                 <text x="0" y="120"
                       style="font-family:'Cormorant Garamond',Georgia,serif;font-weight:900;font-size:120px;letter-spacing:-4.8px;">
@@ -244,11 +241,12 @@
 
             </defs>
 
-            <!-- Pattern rect gets warped by filter, then clipped to text shape -->
+            <!-- Oversized rect scrolls upward through the clip window → lava lamp rise -->
             <g clip-path="url(#name-clip)">
-              <rect x="-5%" y="-5%" width="110%" height="110%"
-                    fill="url(#topo-lines)"
-                    filter="url(#topo-warp)"/>
+              <g class="lava-rise">
+                <rect x="-100" y="-500" width="1200" height="1200"
+                      filter="url(#lava-flow)"/>
+              </g>
             </g>
 
           </svg>

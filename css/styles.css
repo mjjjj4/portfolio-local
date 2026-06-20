@@ -427,6 +427,22 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
   overflow: visible;
 }
 
+/*
+  lavaRise scrolls the noise rect upward through the text clipPath window.
+  feTurbulence generates noise based on absolute pixel coordinates, so as the
+  group translates upward, different y-slices of the noise field enter from
+  below — creating genuine upward spatial drift, not just scale-morphing.
+  The rect is 1200px tall (y -500 to 700) so the viewport is always covered.
+  Duration 43s is coprime with the filter's 31s + 19s timers (LCM ≈ 25k s).
+*/
+@keyframes lavaRise {
+  from { transform: translateY(0px);    }
+  to   { transform: translateY(-420px); }
+}
+.lava-rise {
+  animation: lavaRise 43s linear infinite;
+}
+
 .hero__description {
   font-size: clamp(1rem, 2vw, 1.35rem);
   font-weight: 400;
