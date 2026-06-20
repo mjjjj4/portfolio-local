@@ -78,7 +78,7 @@
 
   function startTimer() {
     clearInterval(timer);
-    timer = setInterval(next, 4800);
+    timer = setInterval(next, 8000);
   }
 
   // Init
