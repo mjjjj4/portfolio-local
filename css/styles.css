@@ -410,49 +410,21 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
   margin-bottom: 1rem;
 }
 
-/* --- Topographic contour lines ---
-   repeating-linear-gradient creates thin navy→blue stripes.
-   SVG filter #topo-warp (defined inline in index.html) displaces
-   those straight stripes into organic curves via feTurbulence.
-   Three independent animation timers (19s, 43s, 16s) are coprime
-   so the combined pattern never repeats.                          */
+/* --- Hero name: SVG clipPath topographic lines ---
+   Letter edges come from <clipPath> (always crisp).
+   The stripe pattern + warp filter runs on a <rect> INSIDE
+   the clip, so only the lines deform — not the letter shapes. */
 .hero__name {
-  font-size: clamp(3rem, 8vw, 7rem);
-  font-weight: 900;
-  letter-spacing: -0.04em;
-  line-height: 0.95;
   margin-bottom: 1.25rem;
-  background: repeating-linear-gradient(
-    28deg,
-    #020d24  0px, #020d24  4px,   /* gap — site bg colour */
-    #091f52  4px, #091f52  6px,   /* line 1 — deep navy */
-    #020d24  6px, #020d24 11px,
-    #1e4d8c 11px, #1e4d8c 13px,   /* line 2 — navy */
-    #020d24 13px, #020d24 18px,
-    #2563eb 18px, #2563eb 20px,   /* line 3 — mid blue */
-    #020d24 20px, #020d24 25px,
-    #3b82f6 25px, #3b82f6 27px,   /* line 4 — blue */
-    #020d24 27px, #020d24 32px,
-    #60b8f5 32px, #60b8f5 34px,   /* line 5 — light blue */
-    #020d24 34px, #020d24 39px,
-    #93c5fd 39px, #93c5fd 41px,   /* line 6 — lightest */
-    #020d24 41px, #020d24 46px    /* gap to close cycle */
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  filter: url(#topo-warp);
-  animation: topoDrift 16s ease-in-out infinite;
+  line-height: 1;
 }
 
-/* Slow positional drift — third independent timer */
-@keyframes topoDrift {
-  0%   { background-position:   0px   0px; }
-  20%  { background-position:  20px   9px; }
-  40%  { background-position:  11px  28px; }
-  60%  { background-position: -16px  18px; }
-  80%  { background-position:   6px -11px; }
-  100% { background-position:   0px   0px; }
+.hero__name-svg {
+  display: block;
+  width: 100%;
+  max-width: 680px;
+  height: auto;
+  overflow: visible;
 }
 
 .hero__description {

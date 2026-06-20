@@ -14,47 +14,6 @@
 <body>
 
   <!-- ============================================================
-       SVG FILTER — topographic warp for hero name
-       feTurbulence generates organic noise; feDisplacementMap
-       uses that noise to push pixels sideways, turning straight
-       gradient stripes into topographic contour curves.
-       Two <animate> durations (19s, 43s) are coprime — they drift
-       apart forever so the warp pattern never repeats.
-       ============================================================ -->
-  <svg aria-hidden="true" focusable="false"
-       style="position:absolute;width:0;height:0;overflow:hidden;pointer-events:none;">
-    <defs>
-      <filter id="topo-warp" color-interpolation-filters="sRGB"
-              x="-25%" y="-25%" width="150%" height="150%">
-        <feTurbulence type="turbulence"
-                      baseFrequency="0.007 0.0045"
-                      numOctaves="4"
-                      seed="5"
-                      result="waveNoise">
-          <!-- Morphs wave shape: medium pace, smooth easing -->
-          <animate attributeName="baseFrequency"
-                   values="0.007 0.0045;0.011 0.007;0.006 0.010;0.009 0.005;0.008 0.009;0.007 0.0045"
-                   dur="19s"
-                   repeatCount="indefinite"
-                   calcMode="spline"
-                   keyTimes="0;0.2;0.4;0.6;0.8;1"
-                   keySplines="0.45 0 0.55 1;0.45 0 0.55 1;0.45 0 0.55 1;0.45 0 0.55 1;0.45 0 0.55 1"/>
-          <!-- Shifts which noise landscape is used — different prime duration -->
-          <animate attributeName="seed"
-                   values="5;13;7;19;11;3;5"
-                   dur="43s"
-                   repeatCount="indefinite"/>
-        </feTurbulence>
-        <!-- scale="13": distorts stripes into curves; bold 7rem text stays legible -->
-        <feDisplacementMap in="SourceGraphic" in2="waveNoise"
-                           scale="13"
-                           xChannelSelector="R"
-                           yChannelSelector="G"/>
-      </filter>
-    </defs>
-  </svg>
-
-  <!-- ============================================================
        NAVIGATION
        ============================================================ -->
   <nav class="nav" role="navigation" aria-label="Main navigation">
@@ -200,7 +159,100 @@
       <!-- Hero text overlay -->
       <div class="hero__text">
         <p class="hero__tagline">Creative Portfolio</p>
-        <h1 class="hero__name gradient-text">Madelyn<br>Janz</h1>
+        <!--
+          SVG TOPO TEXT
+          How it works:
+            1. <clipPath> holds the text shapes — never rendered, used only as a mask
+            2. A <rect> fills the clip area with the animated stripe pattern
+            3. feTurbulence + feDisplacementMap warps the stripes into curves ON THE RECT,
+               BEFORE the clip is applied → letter edges stay razor-sharp
+            4. Three independent timers (19s baseFreq, 43s seed, 16s translate)
+               are coprime so the pattern never repeats
+        -->
+        <h1 class="hero__name" aria-label="Madelyn Janz">
+          <svg class="hero__name-svg"
+               viewBox="0 0 1000 285"
+               preserveAspectRatio="xMinYMid meet"
+               xmlns="http://www.w3.org/2000/svg"
+               aria-hidden="true" focusable="false">
+            <defs>
+
+              <!-- Warp filter: turns straight stripes into organic curves -->
+              <filter id="topo-warp" color-interpolation-filters="sRGB"
+                      x="-15%" y="-30%" width="130%" height="160%">
+                <feTurbulence type="turbulence"
+                              baseFrequency="0.008 0.005"
+                              numOctaves="4"
+                              seed="5"
+                              result="waveNoise">
+                  <animate attributeName="baseFrequency"
+                           values="0.008 0.005;0.012 0.008;0.007 0.011;0.010 0.006;0.009 0.010;0.008 0.005"
+                           dur="19s" repeatCount="indefinite"
+                           calcMode="spline"
+                           keyTimes="0;0.2;0.4;0.6;0.8;1"
+                           keySplines="0.45 0 0.55 1;0.45 0 0.55 1;0.45 0 0.55 1;0.45 0 0.55 1;0.45 0 0.55 1"/>
+                  <animate attributeName="seed"
+                           values="5;13;7;19;11;3;5"
+                           dur="43s" repeatCount="indefinite"/>
+                </feTurbulence>
+                <feDisplacementMap in="SourceGraphic" in2="waveNoise"
+                                   scale="22"
+                                   xChannelSelector="R" yChannelSelector="G"/>
+              </filter>
+
+              <!-- Topographic stripe pattern: thin lines cycling dark navy → light blue -->
+              <pattern id="topo-lines"
+                       width="42" height="42"
+                       patternUnits="userSpaceOnUse"
+                       patternTransform="rotate(28)">
+                <!-- base fill (matches site background) -->
+                <rect fill="#020d24" width="42" height="42"/>
+                <!-- lines, each 2px, cycling darkest→lightest→darkest -->
+                <rect fill="#091f52" y="0"  width="42" height="1.5"/>
+                <rect fill="#1a3a7a" y="6"  width="42" height="1.5"/>
+                <rect fill="#1e4d8c" y="12" width="42" height="1.5"/>
+                <rect fill="#2563eb" y="18" width="42" height="1.5"/>
+                <rect fill="#4a90d9" y="24" width="42" height="1.5"/>
+                <rect fill="#60b8f5" y="30" width="42" height="1.5"/>
+                <rect fill="#93c5fd" y="36" width="42" height="1.5"/>
+                <!-- independent drift animation -->
+                <animate attributeName="x"
+                         values="0;20;11;-16;6;0"
+                         dur="16s" repeatCount="indefinite"
+                         calcMode="spline"
+                         keyTimes="0;0.2;0.4;0.6;0.8;1"
+                         keySplines="0.45 0 0.55 1;0.45 0 0.55 1;0.45 0 0.55 1;0.45 0 0.55 1;0.45 0 0.55 1"/>
+                <animate attributeName="y"
+                         values="0;9;28;18;-11;0"
+                         dur="16s" repeatCount="indefinite"
+                         calcMode="spline"
+                         keyTimes="0;0.2;0.4;0.6;0.8;1"
+                         keySplines="0.45 0 0.55 1;0.45 0 0.55 1;0.45 0 0.55 1;0.45 0 0.55 1;0.45 0 0.55 1"/>
+              </pattern>
+
+              <!-- Text clip path — letter shapes only, never rendered visually -->
+              <clipPath id="name-clip">
+                <text x="0" y="120"
+                      style="font-family:'Cormorant Garamond',Georgia,serif;font-weight:900;font-size:120px;letter-spacing:-4.8px;">
+                  Madelyn
+                </text>
+                <text x="0" y="252"
+                      style="font-family:'Cormorant Garamond',Georgia,serif;font-weight:900;font-size:120px;letter-spacing:-4.8px;">
+                  Janz
+                </text>
+              </clipPath>
+
+            </defs>
+
+            <!-- Pattern rect gets warped by filter, then clipped to text shape -->
+            <g clip-path="url(#name-clip)">
+              <rect x="-5%" y="-5%" width="110%" height="110%"
+                    fill="url(#topo-lines)"
+                    filter="url(#topo-warp)"/>
+            </g>
+
+          </svg>
+        </h1>
         <p class="hero__description">
           Visual storyteller crafting images, spaces, and digital experiences that leave a mark.
         </p>
