@@ -416,6 +416,10 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
   letter-spacing: -0.04em;
   line-height: 0.95;
   margin-bottom: 1.25rem;
+  background: linear-gradient(180deg, #0a1a4a 0%, #1e4d8c 45%, #60b8f5 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .hero__description {
@@ -995,11 +999,11 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
 .btn:hover { transform: translateY(-2px); }
 
 .btn--primary {
-  background: var(--gradient-blue);
+  background: linear-gradient(90deg, #c2410c 0%, #f97316 50%, #fcd34d 100%);
   color: white;
-  box-shadow: 0 4px 24px rgba(30, 77, 140, 0.45);
+  box-shadow: 0 4px 24px rgba(249, 115, 22, 0.35);
 }
-.btn--primary:hover { box-shadow: 0 8px 32px rgba(96, 184, 245, 0.4); }
+.btn--primary:hover { box-shadow: 0 8px 32px rgba(252, 211, 77, 0.4); }
 
 .btn--outline {
   border: 1px solid rgba(255,255,255,0.2);
