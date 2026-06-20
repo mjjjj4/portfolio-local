@@ -241,10 +241,20 @@
 
             </defs>
 
-            <!-- Oversized rect scrolls upward through the clip window → lava lamp rise -->
+            <!-- Oversized rect scrolls upward through the clip window → lava lamp rise.
+                 animateTransform uses SVG user units (not CSS px), so the 420-unit
+                 upward drift is predictable regardless of how the SVG is scaled on screen.
+                 Rect is 1400 units tall (y -500 to 900) so the viewport (0–285) is always
+                 covered: at max translation of -420, the rect bottom is still at y=480. -->
             <g clip-path="url(#name-clip)">
-              <g class="lava-rise">
-                <rect x="-100" y="-500" width="1200" height="1200"
+              <g>
+                <animateTransform attributeName="transform"
+                                  type="translate"
+                                  from="0 0" to="0 -420"
+                                  dur="43s"
+                                  repeatCount="indefinite"
+                                  calcMode="linear"/>
+                <rect x="-100" y="-500" width="1200" height="1400"
                       filter="url(#lava-flow)"/>
               </g>
             </g>
