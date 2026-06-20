@@ -416,10 +416,32 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
   letter-spacing: -0.04em;
   line-height: 0.95;
   margin-bottom: 1.25rem;
-  background: linear-gradient(180deg, #0a1a4a 0%, #1e4d8c 45%, #60b8f5 100%);
+  background: linear-gradient(
+    135deg,
+    #03102b 0%,
+    #0a1a4a 12%,
+    #1e4d8c 28%,
+    #4a90d9 42%,
+    #93c5fd 52%,
+    #60b8f5 62%,
+    #1e4d8c 76%,
+    #0a1a4a 88%,
+    #03102b 100%
+  );
+  background-size: 350% 350%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  animation: heroGradientFlow 12s ease-in-out infinite;
+}
+
+@keyframes heroGradientFlow {
+  0%   { background-position: 0%   20%; }
+  20%  { background-position: 80%  0%;  }
+  40%  { background-position: 100% 70%; }
+  60%  { background-position: 30%  100%;}
+  80%  { background-position: 0%   50%; }
+  100% { background-position: 0%   20%; }
 }
 
 .hero__description {
