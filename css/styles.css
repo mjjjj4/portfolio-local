@@ -400,30 +400,28 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
   display: block;
 }
 
-/* Hero text */
-.hero__text {
+/* "Creative Portfolio" label — overlaid at bottom-left of the banner */
+.hero__tagline {
   position: absolute;
   bottom: 2rem;
-  left: 0;
-  right: 0;
+  left: 2.5rem;
   z-index: 10;
-  padding: 0 2.5rem;
-  padding-bottom: 3.5rem;
-}
-
-.hero__tagline {
   font-size: 0.8rem;
   font-weight: 700;
   letter-spacing: 0.25em;
   text-transform: uppercase;
   color: var(--orange-light);
-  margin-bottom: 1rem;
+  margin: 0;
 }
 
-/* --- Hero name: SVG clipPath topographic lines ---
+/* Name + description block below the banner */
+.hero__intro {
+  padding: 2.5rem 2.5rem 0;
+}
+
+/* --- Hero name: SVG clipPath lava-lamp gradient ---
    Letter edges come from <clipPath> (always crisp).
-   The stripe pattern + warp filter runs on a <rect> INSIDE
-   the clip, so only the lines deform — not the letter shapes. */
+   The noise rect INSIDE the clip deforms — not the letter shapes. */
 .hero__name {
   margin-bottom: 1.25rem;
   line-height: 1;
@@ -436,7 +434,6 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
   height: auto;
   overflow: visible;
 }
-
 
 .hero__description {
   font-size: clamp(1rem, 2vw, 1.35rem);
