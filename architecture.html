@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Architecture Renders — Madelyn Janz</title>
-  <meta name="description" content="Architecture renders portfolio by Madelyn Janz." />
+  <title>Renders — Madelyn Janz</title>
+  <meta name="description" content="Architecture render projects by Madelyn Janz." />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
@@ -15,13 +15,13 @@
       <ul class="nav__links" role="list">
         <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
         <li class="nav__item">
-          <a href="architecture.html" class="nav__link active">Architecture
+          <a href="architecture.html" class="nav__link active">Renders
             <svg viewBox="0 0 24 24" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
           </a>
           <div class="nav__dropdown">
-            <a href="#exterior">Exterior Renders</a>
-            <a href="#interior">Interior Renders</a>
-            <a href="#conceptual">Conceptual</a>
+            <a href="#project-01">Project 01</a>
+            <a href="#project-02">Project 02</a>
+            <a href="#project-03">Project 03</a>
           </div>
         </li>
         <li class="nav__item">
@@ -29,20 +29,17 @@
             <svg viewBox="0 0 24 24" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
           </a>
           <div class="nav__dropdown">
-            <a href="photography.html#landscapes">Landscapes</a>
-            <a href="photography.html#portraits">Portraits</a>
-            <a href="photography.html#street">Street</a>
+            <a href="photography.html#product">Product Photography</a>
             <a href="photography.html#nature">Nature</a>
           </div>
         </li>
         <li class="nav__item">
-          <a href="creations.html" class="nav__link">Digital Creations
+          <a href="creations.html" class="nav__link">Web Design
             <svg viewBox="0 0 24 24" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
           </a>
           <div class="nav__dropdown">
             <a href="creations.html#email">Email Campaigns</a>
-            <a href="creations.html#figma">Figma & UI Design</a>
-            <a href="creations.html#branding">Branding</a>
+            <a href="creations.html#figma">Figma &amp; UI Design</a>
           </div>
         </li>
         <li class="nav__item"><a href="about.html" class="nav__link">About</a></li>
@@ -54,22 +51,21 @@
 
   <div class="nav__mobile">
     <a href="index.html" class="nav__mobile-link">Home</a>
-    <div class="nav__mobile-link">Architecture</div>
+    <div class="nav__mobile-link">Renders</div>
     <div class="nav__mobile-sub">
-      <a href="#exterior">Exterior Renders</a>
-      <a href="#interior">Interior Renders</a>
-      <a href="#conceptual">Conceptual</a>
+      <a href="#project-01">Project 01</a>
+      <a href="#project-02">Project 02</a>
+      <a href="#project-03">Project 03</a>
     </div>
     <div class="nav__mobile-link">Photography</div>
     <div class="nav__mobile-sub">
-      <a href="photography.html#landscapes">Landscapes</a><a href="photography.html#portraits">Portraits</a>
-      <a href="photography.html#street">Street</a><a href="photography.html#nature">Nature</a>
+      <a href="photography.html#product">Product Photography</a>
+      <a href="photography.html#nature">Nature</a>
     </div>
-    <div class="nav__mobile-link">Digital Creations</div>
+    <div class="nav__mobile-link">Web Design</div>
     <div class="nav__mobile-sub">
       <a href="creations.html#email">Email Campaigns</a>
-      <a href="creations.html#figma">Figma & UI Design</a>
-      <a href="creations.html#branding">Branding</a>
+      <a href="creations.html#figma">Figma &amp; UI Design</a>
     </div>
     <a href="about.html" class="nav__mobile-link">About</a>
     <a href="index.html#contact" class="nav__mobile-link">Contact</a>
@@ -77,165 +73,266 @@
 
   <div class="gallery-page">
 
-    <!-- Page hero -->
-    <!-- SWAP: <img src="images/architecture/hero.jpg" alt="Architecture" class="gallery-hero__bg" /> -->
     <div class="gallery-hero">
+      <!-- SWAP: <img src="images/architecture/hero.jpg" alt="Renders" class="gallery-hero__bg" /> -->
       <div class="gallery-hero__bg" style="position:absolute;inset:0;background:linear-gradient(135deg,#0a1428 0%,#071420 40%,#1a0a0a 100%);"></div>
       <div class="gallery-hero__overlay"></div>
       <div class="gallery-hero__text">
         <p class="section-label">Portfolio</p>
-        <h1 class="display-lg">Architecture Renders</h1>
+        <h1 class="display-lg">Renders</h1>
       </div>
     </div>
 
-    <!-- ============================================================
-         EXTERIOR RENDERS
-         SWAP: replace gradient divs with real images via data-src
-         ============================================================ -->
-    <section class="gallery-section" id="exterior">
+    <section class="gallery-section" style="padding-bottom:0;">
       <div class="container">
-        <p class="section-label reveal">Exterior</p>
-        <h2 class="display-md reveal delay-1" style="margin-bottom:2.5rem;">Exterior Renders</h2>
-        <div class="gallery-grid">
 
-          <div class="gallery-item wide reveal"
-               data-src="images/architecture/exterior-1.jpg"
-               data-type="image" data-alt="Exterior Render 1"
-               role="button" tabindex="0">
-            <div class="gallery-item__media" style="background:linear-gradient(135deg,#0a1428,#1a2040,#0a0a20);width:100%;height:100%;"></div>
-            <div class="gallery-item__overlay"><div class="gallery-item__icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
-            </div></div>
-          </div>
-
-          <div class="gallery-item reveal delay-1"
-               data-src="images/architecture/exterior-2.jpg"
-               data-type="image" data-alt="Exterior Render 2"
-               role="button" tabindex="0">
-            <div class="gallery-item__media" style="background:linear-gradient(135deg,#0a1830,#1a0a20,#0a1428);width:100%;height:100%;"></div>
-            <div class="gallery-item__overlay"><div class="gallery-item__icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
-            </div></div>
-          </div>
-
-          <div class="gallery-item reveal delay-2"
-               data-src="images/architecture/exterior-3.jpg"
-               data-type="image" data-alt="Exterior Render 3"
-               role="button" tabindex="0">
-            <div class="gallery-item__media" style="background:linear-gradient(135deg,#1a0a28,#0a1428,#0a0a28);width:100%;height:100%;"></div>
-            <div class="gallery-item__overlay"><div class="gallery-item__icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
-            </div></div>
-          </div>
-
-
-          <div class="gallery-item reveal delay-1"
-               data-src="images/architecture/exterior-4.jpg"
-               data-type="image" data-alt="Exterior Render 4"
-               role="button" tabindex="0">
-            <div class="gallery-item__media" style="background:linear-gradient(135deg,#0a1428,#200a10,#0a0a28);width:100%;height:100%;"></div>
-            <div class="gallery-item__overlay"><div class="gallery-item__icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
-            </div></div>
-          </div>
-
-          <div class="gallery-item reveal delay-2"
-               data-src="images/architecture/exterior-5.jpg"
-               data-type="image" data-alt="Exterior Render 5"
-               role="button" tabindex="0">
-            <div class="gallery-item__media" style="background:linear-gradient(135deg,#200a00,#0a1428,#1a0a28);width:100%;height:100%;"></div>
-            <div class="gallery-item__overlay"><div class="gallery-item__icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
-            </div></div>
-          </div>
-
+        <div class="projects-intro reveal">
+          <p class="section-label">My Work</p>
+          <h2 class="display-md">Render Projects</h2>
+          <p>Each project below is a complete visual package. Click any folder to explore the full collection, mood board, and art direction.</p>
         </div>
-      </div>
-    </section>
 
-    <!-- INTERIOR RENDERS -->
-    <section class="gallery-section" id="interior" style="padding-top:0;">
-      <div class="container">
-        <p class="section-label reveal">Interior</p>
-        <h2 class="display-md reveal delay-1" style="margin-bottom:2.5rem;">Interior Renders</h2>
-        <div class="gallery-grid">
+        <!-- ═══════════════════════════════════════════════
+             PROJECT FOLDERS
+             SWAP thumbnails: replace each .folder-thumb__frame div with
+             <img src="images/architecture/project-XX/thumb-N.jpg" alt="..." class="folder-thumb__frame" />
+             Provide 3 images per project for the rotating preview.
+             SWAP image count in .folder-thumb__badge to match your actual count.
+             ═══════════════════════════════════════════════ -->
+        <div class="projects-grid">
 
-          <div class="gallery-item portrait reveal"
-               data-src="images/architecture/interior-1.jpg"
-               data-type="image" data-alt="Interior Render 1" role="button" tabindex="0">
-            <div class="gallery-item__media" style="background:linear-gradient(160deg,#1a1028,#0a0a20);width:100%;height:100%;"></div>
-            <div class="gallery-item__overlay"><div class="gallery-item__icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
-            </div></div>
+          <div class="project-folder reveal delay-1" data-project="01" role="button" tabindex="0" aria-label="Open Project 01" id="project-01">
+            <div class="folder-thumb">
+              <div class="folder-thumb__frame" style="background:linear-gradient(135deg,#0a1428,#1a2040,#0a0a20);width:100%;height:100%;"></div>
+              <div class="folder-thumb__frame" style="background:linear-gradient(135deg,#1a0a28,#0a1428,#0a0a28);width:100%;height:100%;"></div>
+              <div class="folder-thumb__frame" style="background:linear-gradient(135deg,#0a1830,#1a0a20,#0a1428);width:100%;height:100%;"></div>
+              <div class="folder-thumb__badge">3 renders</div>
+            </div>
+            <div class="folder-info">
+              <div class="folder-number">Project 01</div>
+              <div class="folder-name">The Modern Residence</div>
+              <div class="folder-hint">Exterior &amp; Interior</div>
+              <div class="folder-arrow">Explore project
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+              </div>
+            </div>
           </div>
 
-          <div class="gallery-item reveal delay-1"
-               data-src="images/architecture/interior-2.jpg"
-               data-type="image" data-alt="Interior Render 2" role="button" tabindex="0">
-            <div class="gallery-item__media" style="background:linear-gradient(135deg,#0a0a1a,#281040,#0a0818);width:100%;height:100%;"></div>
-            <div class="gallery-item__overlay"><div class="gallery-item__icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
-            </div></div>
+          <div class="project-folder reveal delay-2" data-project="02" role="button" tabindex="0" aria-label="Open Project 02" id="project-02">
+            <div class="folder-thumb">
+              <div class="folder-thumb__frame" style="background:linear-gradient(135deg,#1a1028,#0a0a20,#200a10);width:100%;height:100%;"></div>
+              <div class="folder-thumb__frame" style="background:linear-gradient(135deg,#0a0818,#1a0830,#0a1028);width:100%;height:100%;"></div>
+              <div class="folder-thumb__frame" style="background:linear-gradient(135deg,#280a20,#0a1028,#0a0a18);width:100%;height:100%;"></div>
+              <div class="folder-thumb__badge">4 renders</div>
+            </div>
+            <div class="folder-info">
+              <div class="folder-number">Project 02</div>
+              <div class="folder-name">Urban Loft Series</div>
+              <div class="folder-hint">Interior Visualisation</div>
+              <div class="folder-arrow">Explore project
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+              </div>
+            </div>
           </div>
 
-          <div class="gallery-item reveal delay-2"
-               data-src="images/architecture/interior-3.jpg"
-               data-type="image" data-alt="Interior Render 3" role="button" tabindex="0">
-            <div class="gallery-item__media" style="background:linear-gradient(135deg,#280a20,#0a1028,#0a0a18);width:100%;height:100%;"></div>
-            <div class="gallery-item__overlay"><div class="gallery-item__icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
-            </div></div>
+          <div class="project-folder reveal delay-3" data-project="03" role="button" tabindex="0" aria-label="Open Project 03" id="project-03">
+            <div class="folder-thumb">
+              <div class="folder-thumb__frame" style="background:linear-gradient(135deg,#1a0028,#280a00,#0a1428);width:100%;height:100%;"></div>
+              <div class="folder-thumb__frame" style="background:linear-gradient(135deg,#0a0028,#1a0a00,#0a1428);width:100%;height:100%;"></div>
+              <div class="folder-thumb__frame" style="background:linear-gradient(135deg,#200a28,#0a0a28,#1a0a00);width:100%;height:100%;"></div>
+              <div class="folder-thumb__badge">5 renders</div>
+            </div>
+            <div class="folder-info">
+              <div class="folder-number">Project 03</div>
+              <div class="folder-name">The Pavilion Concept</div>
+              <div class="folder-hint">Conceptual &amp; Exterior</div>
+              <div class="folder-arrow">Explore project
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+              </div>
+            </div>
           </div>
 
-          <div class="gallery-item wide reveal delay-3"
-               data-src="images/architecture/interior-4.jpg"
-               data-type="image" data-alt="Interior Render 4" role="button" tabindex="0">
-            <div class="gallery-item__media" style="background:linear-gradient(135deg,#0a0818,#1a0830,#0a1028);width:100%;height:100%;"></div>
-            <div class="gallery-item__overlay"><div class="gallery-item__icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
-            </div></div>
-          </div>
+        </div><!-- /.projects-grid -->
 
+        <!-- ═══════════════════════════════════════════════
+             PROJECT DETAIL PANELS
+             To fill in your content:
+               1. Replace the art direction paragraph with your own words.
+               2. Swap the mood board placeholder with:
+                  <img src="images/architecture/project-01/moodboard.jpg" alt="Mood board" />
+               3. Replace gallery-item placeholder divs with:
+                  <img src="images/architecture/project-01/render-1.jpg" data-src="..." data-type="image" data-alt="..." class="gallery-item__media" />
+                  (keep the data-src / data-type / data-alt attributes for the lightbox)
+             ═══════════════════════════════════════════════ -->
+
+        <!-- ── Detail: Project 01 ── -->
+        <div class="project-detail" id="project-detail-01">
+          <div class="project-detail__header">
+            <div>
+              <p class="section-label" style="margin-bottom:0.4rem;">Project 01</p>
+              <h2 class="display-md" style="margin:0;">The Modern Residence</h2>
+            </div>
+            <button class="project-detail__close" aria-label="Close project">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+              Close
+            </button>
+          </div>
+          <div class="project-detail__body">
+            <!-- SWAP: replace with your own art direction text -->
+            <p class="project-detail__description">
+              A study in understated luxury — this residential project balances warm natural materials with crisp architectural lines. The brief called for spaces that feel expansive yet intimate, with light as the primary design element. Every render was composed to capture a specific time of day and emotional temperature.
+            </p>
+
+            <div class="project-detail__moodboard">
+              <p class="section-label">Mood Board</p>
+              <!-- SWAP: <img src="images/architecture/project-01/moodboard.jpg" alt="Project 01 mood board" /> -->
+              <div class="project-detail__mood-img">
+                <div style="background:linear-gradient(135deg,#0a1428,#1a2040,#0f0f20);width:100%;height:100%;">
+                  MOOD BOARD — swap with images/architecture/project-01/moodboard.jpg
+                </div>
+              </div>
+            </div>
+
+            <div class="project-detail__renders">
+              <p class="section-label">Renders</p>
+              <div class="gallery-grid" style="margin-top:1rem;">
+
+                <div class="gallery-item wide reveal" data-src="images/architecture/project-01/render-1.jpg" data-type="image" data-alt="Project 01 — Render 1" role="button" tabindex="0">
+                  <div class="gallery-item__media" style="background:linear-gradient(135deg,#0a1428,#1a2040,#0a0a20);width:100%;height:100%;"></div>
+                  <div class="gallery-item__overlay"><div class="gallery-item__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div></div>
+                </div>
+
+                <div class="gallery-item reveal delay-1" data-src="images/architecture/project-01/render-2.jpg" data-type="image" data-alt="Project 01 — Render 2" role="button" tabindex="0">
+                  <div class="gallery-item__media" style="background:linear-gradient(135deg,#0a1830,#1a0a20,#0a1428);width:100%;height:100%;"></div>
+                  <div class="gallery-item__overlay"><div class="gallery-item__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div></div>
+                </div>
+
+                <div class="gallery-item reveal delay-2" data-src="images/architecture/project-01/render-3.jpg" data-type="image" data-alt="Project 01 — Render 3" role="button" tabindex="0">
+                  <div class="gallery-item__media" style="background:linear-gradient(135deg,#1a0a28,#0a1428,#0a0a28);width:100%;height:100%;"></div>
+                  <div class="gallery-item__overlay"><div class="gallery-item__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div></div>
+                </div>
+
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </section>
 
-    <!-- CONCEPTUAL -->
-    <section class="gallery-section" id="conceptual" style="padding-top:0;">
-      <div class="container">
-        <p class="section-label reveal">Conceptual</p>
-        <h2 class="display-md reveal delay-1" style="margin-bottom:2.5rem;">Conceptual Designs</h2>
-        <div class="gallery-grid">
-
-          <div class="gallery-item reveal"
-               data-src="images/architecture/concept-1.jpg"
-               data-type="image" data-alt="Concept 1" role="button" tabindex="0">
-            <div class="gallery-item__media" style="background:linear-gradient(135deg,#1a0028,#280a00,#0a1428);width:100%;height:100%;"></div>
-            <div class="gallery-item__overlay"><div class="gallery-item__icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
-            </div></div>
+        <!-- ── Detail: Project 02 ── -->
+        <div class="project-detail" id="project-detail-02">
+          <div class="project-detail__header">
+            <div>
+              <p class="section-label" style="margin-bottom:0.4rem;">Project 02</p>
+              <h2 class="display-md" style="margin:0;">Urban Loft Series</h2>
+            </div>
+            <button class="project-detail__close" aria-label="Close project">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+              Close
+            </button>
           </div>
+          <div class="project-detail__body">
+            <p class="project-detail__description">
+              High-rise living reimagined for a generation that works and plays at home. This series explores raw concrete juxtaposed with soft textiles and ambient light — a visual narrative of urban energy brought indoors. Each frame tells its own story while remaining part of a cohesive series.
+            </p>
 
-          <div class="gallery-item reveal delay-1"
-               data-src="images/architecture/concept-2.jpg"
-               data-type="image" data-alt="Concept 2" role="button" tabindex="0">
-            <div class="gallery-item__media" style="background:linear-gradient(135deg,#0a0028,#1a0a00,#0a1428);width:100%;height:100%;"></div>
-            <div class="gallery-item__overlay"><div class="gallery-item__icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
-            </div></div>
+            <div class="project-detail__moodboard">
+              <p class="section-label">Mood Board</p>
+              <div class="project-detail__mood-img">
+                <div style="background:linear-gradient(135deg,#1a1028,#0a0a20,#200a10);width:100%;height:100%;">
+                  MOOD BOARD — swap with images/architecture/project-02/moodboard.jpg
+                </div>
+              </div>
+            </div>
+
+            <div class="project-detail__renders">
+              <p class="section-label">Renders</p>
+              <div class="gallery-grid" style="margin-top:1rem;">
+
+                <div class="gallery-item portrait reveal" data-src="images/architecture/project-02/render-1.jpg" data-type="image" data-alt="Project 02 — Render 1" role="button" tabindex="0">
+                  <div class="gallery-item__media" style="background:linear-gradient(160deg,#1a1028,#0a0a20);width:100%;height:100%;"></div>
+                  <div class="gallery-item__overlay"><div class="gallery-item__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div></div>
+                </div>
+
+                <div class="gallery-item reveal delay-1" data-src="images/architecture/project-02/render-2.jpg" data-type="image" data-alt="Project 02 — Render 2" role="button" tabindex="0">
+                  <div class="gallery-item__media" style="background:linear-gradient(135deg,#0a0a1a,#281040,#0a0818);width:100%;height:100%;"></div>
+                  <div class="gallery-item__overlay"><div class="gallery-item__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div></div>
+                </div>
+
+                <div class="gallery-item reveal delay-2" data-src="images/architecture/project-02/render-3.jpg" data-type="image" data-alt="Project 02 — Render 3" role="button" tabindex="0">
+                  <div class="gallery-item__media" style="background:linear-gradient(135deg,#280a20,#0a1028,#0a0a18);width:100%;height:100%;"></div>
+                  <div class="gallery-item__overlay"><div class="gallery-item__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div></div>
+                </div>
+
+                <div class="gallery-item wide reveal delay-1" data-src="images/architecture/project-02/render-4.jpg" data-type="image" data-alt="Project 02 — Render 4" role="button" tabindex="0">
+                  <div class="gallery-item__media" style="background:linear-gradient(135deg,#0a0818,#1a0830,#0a1028);width:100%;height:100%;"></div>
+                  <div class="gallery-item__overlay"><div class="gallery-item__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div></div>
+                </div>
+
+              </div>
+            </div>
           </div>
-
-          <div class="gallery-item reveal delay-2"
-               data-src="images/architecture/concept-3.jpg"
-               data-type="image" data-alt="Concept 3" role="button" tabindex="0">
-            <div class="gallery-item__media" style="background:linear-gradient(135deg,#200a28,#0a0a28,#1a0a00);width:100%;height:100%;"></div>
-            <div class="gallery-item__overlay"><div class="gallery-item__icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
-            </div></div>
-          </div>
-
         </div>
-      </div>
+
+        <!-- ── Detail: Project 03 ── -->
+        <div class="project-detail" id="project-detail-03">
+          <div class="project-detail__header">
+            <div>
+              <p class="section-label" style="margin-bottom:0.4rem;">Project 03</p>
+              <h2 class="display-md" style="margin:0;">The Pavilion Concept</h2>
+            </div>
+            <button class="project-detail__close" aria-label="Close project">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+              Close
+            </button>
+          </div>
+          <div class="project-detail__body">
+            <p class="project-detail__description">
+              A speculative design exploring how public and private space can dissolve into each other through material lightness and strategic transparency. This conceptual pavilion was visualised across multiple lighting scenarios — from harsh midday sun to golden hour — each revealing a different facet of the structure's relationship with its surroundings.
+            </p>
+
+            <div class="project-detail__moodboard">
+              <p class="section-label">Mood Board</p>
+              <div class="project-detail__mood-img">
+                <div style="background:linear-gradient(135deg,#1a0028,#280a00,#0a1428);width:100%;height:100%;">
+                  MOOD BOARD — swap with images/architecture/project-03/moodboard.jpg
+                </div>
+              </div>
+            </div>
+
+            <div class="project-detail__renders">
+              <p class="section-label">Renders</p>
+              <div class="gallery-grid" style="margin-top:1rem;">
+
+                <div class="gallery-item wide reveal" data-src="images/architecture/project-03/render-1.jpg" data-type="image" data-alt="Project 03 — Render 1" role="button" tabindex="0">
+                  <div class="gallery-item__media" style="background:linear-gradient(135deg,#1a0028,#280a00,#0a1428);width:100%;height:100%;"></div>
+                  <div class="gallery-item__overlay"><div class="gallery-item__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div></div>
+                </div>
+
+                <div class="gallery-item reveal delay-1" data-src="images/architecture/project-03/render-2.jpg" data-type="image" data-alt="Project 03 — Render 2" role="button" tabindex="0">
+                  <div class="gallery-item__media" style="background:linear-gradient(135deg,#0a0028,#1a0a00,#0a1428);width:100%;height:100%;"></div>
+                  <div class="gallery-item__overlay"><div class="gallery-item__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div></div>
+                </div>
+
+                <div class="gallery-item reveal delay-2" data-src="images/architecture/project-03/render-3.jpg" data-type="image" data-alt="Project 03 — Render 3" role="button" tabindex="0">
+                  <div class="gallery-item__media" style="background:linear-gradient(135deg,#200a28,#0a0a28,#1a0a00);width:100%;height:100%;"></div>
+                  <div class="gallery-item__overlay"><div class="gallery-item__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div></div>
+                </div>
+
+                <div class="gallery-item reveal" data-src="images/architecture/project-03/render-4.jpg" data-type="image" data-alt="Project 03 — Render 4" role="button" tabindex="0">
+                  <div class="gallery-item__media" style="background:linear-gradient(135deg,#1a0a00,#200a28,#0a0028);width:100%;height:100%;"></div>
+                  <div class="gallery-item__overlay"><div class="gallery-item__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div></div>
+                </div>
+
+                <div class="gallery-item wide reveal delay-1" data-src="images/architecture/project-03/render-5.jpg" data-type="image" data-alt="Project 03 — Render 5" role="button" tabindex="0">
+                  <div class="gallery-item__media" style="background:linear-gradient(135deg,#0a0028,#200a00,#0a1028);width:100%;height:100%;"></div>
+                  <div class="gallery-item__overlay"><div class="gallery-item__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div></div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /.container -->
     </section>
 
   </div><!-- /.gallery-page -->
@@ -272,27 +369,15 @@
         </a>
         <div class="contact__socials">
           <a href="#" class="social-btn" aria-label="Instagram">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-              <circle cx="12" cy="12" r="4"/>
-              <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
-            </svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
             Instagram
           </a>
           <a href="#" class="social-btn" aria-label="LinkedIn">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/>
-              <rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/>
-            </svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
             LinkedIn
           </a>
           <a href="#" class="social-btn" aria-label="Behance">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M1 6h8.5C12 6 14 7.5 14 10s-2 4-4.5 4H1V6z"/>
-              <path d="M1 14h9.5C14 14 16 15.5 16 18s-2 4-5.5 4H1V14z"/>
-              <line x1="15" y1="7" x2="23" y2="7"/>
-              <path d="M19 4.5C17 4.5 15 6 15 8.5s2 4 4 4 4-1.5 4-4"/>
-            </svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 6h8.5C12 6 14 7.5 14 10s-2 4-4.5 4H1V6z"/><path d="M1 14h9.5C14 14 16 15.5 16 18s-2 4-5.5 4H1V14z"/><line x1="15" y1="7" x2="23" y2="7"/><path d="M19 4.5C17 4.5 15 6 15 8.5s2 4 4 4 4-1.5 4-4"/></svg>
             Behance
           </a>
         </div>
@@ -307,5 +392,58 @@
 
   <script src="js/main.js"></script>
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script>
+  /* ── Project folder interactions ── */
+  (function () {
+    var folders = Array.from(document.querySelectorAll('.project-folder'));
+    var details = Array.from(document.querySelectorAll('.project-detail'));
+
+    /* Rotating thumbnail preview: cycle frames every 2.5 s */
+    folders.forEach(function (folder) {
+      var frames = Array.from(folder.querySelectorAll('.folder-thumb__frame'));
+      if (frames.length < 2) return;
+      var current = 0;
+      frames[0].style.opacity = '1';
+      setInterval(function () {
+        frames[current].style.opacity = '0';
+        current = (current + 1) % frames.length;
+        frames[current].style.opacity = '1';
+      }, 2500);
+    });
+
+    /* Expand / collapse detail panel on folder click */
+    folders.forEach(function (folder) {
+      folder.addEventListener('click', function () {
+        var projectId = folder.dataset.project;
+        var detail    = document.getElementById('project-detail-' + projectId);
+        var isOpen    = folder.classList.contains('active');
+
+        folders.forEach(function (f) { f.classList.remove('active'); });
+        details.forEach(function (d) { d.classList.remove('open'); });
+
+        if (!isOpen) {
+          folder.classList.add('active');
+          detail.classList.add('open');
+          setTimeout(function () {
+            detail.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          }, 80);
+        }
+      });
+    });
+
+    /* Close button inside detail panel */
+    document.querySelectorAll('.project-detail__close').forEach(function (btn) {
+      btn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        var detail    = btn.closest('.project-detail');
+        var projectId = detail.id.replace('project-detail-', '');
+        detail.classList.remove('open');
+        folders.forEach(function (f) {
+          if (f.dataset.project === projectId) f.classList.remove('active');
+        });
+      });
+    });
+  })();
+  </script>
 </body>
 </html>
