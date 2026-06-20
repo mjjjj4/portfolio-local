@@ -291,8 +291,10 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
    ============================================================ */
 .hero {
   position: relative;
-  height: 100vh;
-  min-height: 600px;
+  width: 100%;
+  aspect-ratio: 1920 / 1080;
+  min-height: 420px;
+  max-height: 100vh;
   overflow: hidden;
 }
 
@@ -350,7 +352,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
   padding: 0 2rem;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   z-index: 10;
   pointer-events: none;
 }
@@ -359,6 +361,8 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
   display: flex;
   gap: 10px;
   pointer-events: all;
+  flex: 1;
+  justify-content: center;
 }
 .slideshow__dot {
   width: 8px;
