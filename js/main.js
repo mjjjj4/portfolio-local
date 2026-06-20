@@ -92,10 +92,6 @@
     dot.addEventListener('click', () => { goTo(i); startTimer(); });
   });
 
-  // Pause on hover
-  slideshow.addEventListener('mouseenter', () => clearInterval(timer));
-  slideshow.addEventListener('mouseleave', startTimer);
-
   // Touch/swipe support
   let touchStartX = 0;
   slideshow.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
