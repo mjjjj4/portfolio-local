@@ -410,39 +410,59 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
   margin-bottom: 1rem;
 }
 
+/* --- Lava-lamp gradient: each blob's x/y moves at its own speed ---
+   @property lets CSS animate custom properties inside gradient functions.
+   All 10 durations are co-prime so the blobs never fall into sync.      */
+@property --lx1 { syntax: '<percentage>'; inherits: false; initial-value: 15%; }
+@property --ly1 { syntax: '<percentage>'; inherits: false; initial-value: 22%; }
+@property --lx2 { syntax: '<percentage>'; inherits: false; initial-value: 78%; }
+@property --ly2 { syntax: '<percentage>'; inherits: false; initial-value: 68%; }
+@property --lx3 { syntax: '<percentage>'; inherits: false; initial-value: 48%; }
+@property --ly3 { syntax: '<percentage>'; inherits: false; initial-value: 88%; }
+@property --lx4 { syntax: '<percentage>'; inherits: false; initial-value: 58%; }
+@property --ly4 { syntax: '<percentage>'; inherits: false; initial-value: 12%; }
+@property --lx5 { syntax: '<percentage>'; inherits: false; initial-value: 28%; }
+@property --ly5 { syntax: '<percentage>'; inherits: false; initial-value: 52%; }
+
 .hero__name {
   font-size: clamp(3rem, 8vw, 7rem);
   font-weight: 900;
   letter-spacing: -0.04em;
   line-height: 0.95;
   margin-bottom: 1.25rem;
-  background: linear-gradient(
-    135deg,
-    #03102b 0%,
-    #0a1a4a 12%,
-    #1e4d8c 28%,
-    #4a90d9 42%,
-    #93c5fd 52%,
-    #60b8f5 62%,
-    #1e4d8c 76%,
-    #0a1a4a 88%,
-    #03102b 100%
-  );
-  background-size: 350% 350%;
+  background:
+    radial-gradient(ellipse 58% 72% at var(--lx1) var(--ly1), #60b8f5 0%, transparent 78%),
+    radial-gradient(ellipse 70% 52% at var(--lx2) var(--ly2), #93c5fd 0%, transparent 72%),
+    radial-gradient(ellipse 82% 48% at var(--lx3) var(--ly3), #1a5fa8 0%, transparent 80%),
+    radial-gradient(ellipse 48% 84% at var(--lx4) var(--ly4), #4a90d9 0%, transparent 68%),
+    radial-gradient(ellipse 62% 64% at var(--lx5) var(--ly5), #0d3a6e 0%, transparent 76%),
+    #020d24;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  animation: heroGradientFlow 12s ease-in-out infinite;
+  animation:
+    lx1 13s ease-in-out infinite alternate,
+    ly1  9s ease-in-out infinite alternate,
+    lx2 17s ease-in-out infinite alternate-reverse,
+    ly2 11s ease-in-out infinite alternate,
+    lx3  7s ease-in-out infinite alternate,
+    ly3 15s ease-in-out infinite alternate-reverse,
+    lx4 19s ease-in-out infinite alternate,
+    ly4  8s ease-in-out infinite alternate-reverse,
+    lx5 23s ease-in-out infinite alternate-reverse,
+    ly5 14s ease-in-out infinite alternate;
 }
 
-@keyframes heroGradientFlow {
-  0%   { background-position: 0%   20%; }
-  20%  { background-position: 80%  0%;  }
-  40%  { background-position: 100% 70%; }
-  60%  { background-position: 30%  100%;}
-  80%  { background-position: 0%   50%; }
-  100% { background-position: 0%   20%; }
-}
+@keyframes lx1 { to { --lx1: 84%; } }
+@keyframes ly1 { to { --ly1: 76%; } }
+@keyframes lx2 { to { --lx2: 16%; } }
+@keyframes ly2 { to { --ly2: 22%; } }
+@keyframes lx3 { to { --lx3: 74%; } }
+@keyframes ly3 { to { --ly3: 10%; } }
+@keyframes lx4 { to { --lx4: 26%; } }
+@keyframes ly4 { to { --ly4: 90%; } }
+@keyframes lx5 { to { --lx5: 66%; } }
+@keyframes ly5 { to { --ly5: 32%; } }
 
 .hero__description {
   font-size: clamp(1rem, 2vw, 1.35rem);
