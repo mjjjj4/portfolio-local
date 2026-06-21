@@ -338,7 +338,8 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
   background: linear-gradient(
     to bottom,
     transparent 0%,
-    transparent 85%,
+    rgba(8,8,15,0.04) 55%,
+    rgba(8,8,15,0.25) 78%,
     rgba(8,8,15,1) 100%
   );
 }
@@ -591,7 +592,8 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
   background: linear-gradient(
     to bottom,
     transparent 0%,
-    transparent 85%,
+    rgba(8,8,15,0.04) 55%,
+    rgba(8,8,15,0.25) 78%,
     rgba(8,8,15,1) 100%
   );
 }
