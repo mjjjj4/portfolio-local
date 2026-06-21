@@ -605,7 +605,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
 }
 
 .gallery-section {
-  padding: 4rem 0 2rem;
+  padding: 0.5rem 0 2rem;
 }
 
 .gallery-grid {
@@ -675,7 +675,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
    PROJECT FOLDER SYSTEM (Renders page)
    ============================================================ */
 .projects-intro {
-  padding: 4rem 0 3rem;
+  padding: 1.5rem 0 3rem;
 }
 .projects-intro p {
   color: rgba(255,255,255,0.6);
