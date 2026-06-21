@@ -712,7 +712,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
 
 .folder-thumb {
   position: relative;
-  aspect-ratio: 4/3;
+  aspect-ratio: 3/4;
   overflow: hidden;
   background: #0a0f1e;
 }
