@@ -605,7 +605,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
 }
 
 .gallery-section {
-  padding: 4rem 0 6rem;
+  padding: 4rem 0 2rem;
 }
 
 .gallery-grid {
