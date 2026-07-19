@@ -347,7 +347,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
 /* Slideshow controls */
 .slideshow__controls {
   position: absolute;
-  bottom: 7rem;
+  bottom: 2rem;
   left: 0;
   right: 0;
   padding: 0 2rem;
@@ -592,8 +592,8 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
   background: linear-gradient(
     to bottom,
     transparent 0%,
-    rgba(8,8,15,0.04) 55%,
-    rgba(8,8,15,0.25) 78%,
+    rgba(8,8,15,0.15) 50%,
+    rgba(8,8,15,0.60) 72%,
     rgba(8,8,15,1) 100%
   );
 }
