@@ -540,8 +540,14 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
 
 /* Hover state */
 .category-tile:hover .category-tile__img { transform: scale(1.08); }
-.category-tile:hover .category-tile__overlay {
+.category-tile--renders:hover .category-tile__overlay {
+  background: linear-gradient(180deg, rgba(30, 80, 200, 0.20) 0%, rgba(8,8,15,0.95) 60%);
+}
+.category-tile--photo:hover .category-tile__overlay {
   background: linear-gradient(180deg, rgba(124, 58, 237, 0.15) 0%, rgba(8,8,15,0.95) 60%);
+}
+.category-tile--webdesign:hover .category-tile__overlay {
+  background: linear-gradient(180deg, rgba(220, 80, 30, 0.20) 0%, rgba(8,8,15,0.95) 60%);
 }
 .category-tile:hover .category-tile__content { transform: translateY(0); }
 .category-tile:hover .category-tile__label { opacity: 1; transform: translateY(0); }
@@ -1291,7 +1297,8 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
   .hero__name-svg { max-width: none; width: 100%; }
 
   .hero__tagline { bottom: 4rem; }
-  .slideshow__controls { bottom: 2rem; }
+  .slideshow__controls { bottom: 4rem; }
+  .slideshow__dots { transform: translateY(2rem); }
 
   .categories__grid { grid-template-columns: 1fr; }
   .category-tile { aspect-ratio: 16/9; }

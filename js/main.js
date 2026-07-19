@@ -63,6 +63,7 @@
 
   let current = 0;
   let timer;
+  const durations = [6000, 2500];
 
   function goTo(idx) {
     slides[current].classList.remove('active');
@@ -76,8 +77,8 @@
   function prev() { goTo(current - 1); }
 
   function startTimer() {
-    clearInterval(timer);
-    timer = setInterval(next, 8000);
+    clearTimeout(timer);
+    timer = setTimeout(function() { next(); startTimer(); }, durations[current] ?? 6000);
   }
 
   // Init
