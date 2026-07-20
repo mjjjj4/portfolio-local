@@ -63,7 +63,7 @@
 
   let current = 0;
   let timer;
-  const durations = [6000, 2500];
+  const durations = [6000, 5000];
 
   function goTo(idx) {
     slides[current].classList.remove('active');
