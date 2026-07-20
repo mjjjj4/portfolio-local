@@ -217,8 +217,33 @@
         <!-- Category 1: Architecture Renders -->
         <a href="architecture.html" class="category-tile category-tile--renders reveal delay-1">
           <!-- SWAP: <img src="images/architecture/cover.jpg" alt="Architecture Renders" class="category-tile__img" /> -->
-          <div class="category-tile__placeholder"
-               style="background: linear-gradient(135deg, #0d2158 0%, #1a3a70 20%, #0a1a40 45%, #2a1850 70%, #1e3870 100%);"></div>
+          <svg class="category-tile__placeholder" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <filter id="noise-renders" color-interpolation-filters="sRGB" x="-20%" y="-20%" width="140%" height="140%">
+                <feTurbulence type="fractalNoise" baseFrequency="0.004 0.006" numOctaves="4" seed="7" result="colorNoise">
+                  <animate attributeName="baseFrequency"
+                           values="0.004 0.006;0.006 0.004;0.003 0.008;0.005 0.005;0.004 0.006"
+                           dur="28s" repeatCount="indefinite" calcMode="spline"
+                           keyTimes="0;0.25;0.5;0.75;1"
+                           keySplines="0.45 0 0.55 1;0.45 0 0.55 1;0.45 0 0.55 1;0.45 0 0.55 1"/>
+                </feTurbulence>
+                <feColorMatrix type="matrix" in="colorNoise" result="colored"
+                               values="0.126 0 0 0 0.039
+                                       0.275 0 0 0 0.078
+                                       0.510 0 0 0 0.157
+                                       0     0 0 0 1"/>
+                <feTurbulence type="fractalNoise" baseFrequency="0.008 0.012" numOctaves="3" seed="2" result="warp">
+                  <animate attributeName="baseFrequency"
+                           values="0.008 0.012;0.012 0.008;0.006 0.015;0.010 0.010;0.008 0.012"
+                           dur="21s" repeatCount="indefinite" calcMode="spline"
+                           keyTimes="0;0.25;0.5;0.75;1"
+                           keySplines="0.45 0 0.55 1;0.45 0 0.55 1;0.45 0 0.55 1;0.45 0 0.55 1"/>
+                </feTurbulence>
+                <feDisplacementMap in="colored" in2="warp" scale="40" xChannelSelector="R" yChannelSelector="G"/>
+              </filter>
+            </defs>
+            <rect width="100%" height="100%" filter="url(#noise-renders)"/>
+          </svg>
           <div class="category-tile__overlay"></div>
           <div class="category-tile__content">
             <div class="category-tile__label">3D & Rendering</div>
@@ -235,8 +260,33 @@
         <!-- Category 2: Digital Photography -->
         <a href="photography.html" class="category-tile category-tile--photo reveal delay-2">
           <!-- SWAP: <img src="images/photography/cover.jpg" alt="Digital Photography" class="category-tile__img" /> -->
-          <div class="category-tile__placeholder"
-               style="background: linear-gradient(135deg, #1a0e4a 0%, #3a1880 20%, #1e1040 45%, #2a0a60 70%, #1a2858 100%);"></div>
+          <svg class="category-tile__placeholder" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <filter id="noise-photo" color-interpolation-filters="sRGB" x="-20%" y="-20%" width="140%" height="140%">
+                <feTurbulence type="fractalNoise" baseFrequency="0.0035 0.005" numOctaves="4" seed="11" result="colorNoise">
+                  <animate attributeName="baseFrequency"
+                           values="0.0035 0.005;0.005 0.0035;0.003 0.007;0.0048 0.0042;0.0035 0.005"
+                           dur="31s" repeatCount="indefinite" calcMode="spline"
+                           keyTimes="0;0.25;0.5;0.75;1"
+                           keySplines="0.45 0 0.55 1;0.45 0 0.55 1;0.45 0 0.55 1;0.45 0 0.55 1"/>
+                </feTurbulence>
+                <feColorMatrix type="matrix" in="colorNoise" result="colored"
+                               values="0.294 0 0 0 0.059
+                                       0.063 0 0 0 0.031
+                                       0.361 0 0 0 0.141
+                                       0     0 0 0 1"/>
+                <feTurbulence type="fractalNoise" baseFrequency="0.007 0.011" numOctaves="3" seed="5" result="warp">
+                  <animate attributeName="baseFrequency"
+                           values="0.007 0.011;0.011 0.007;0.005 0.014;0.009 0.009;0.007 0.011"
+                           dur="19s" repeatCount="indefinite" calcMode="spline"
+                           keyTimes="0;0.25;0.5;0.75;1"
+                           keySplines="0.45 0 0.55 1;0.45 0 0.55 1;0.45 0 0.55 1;0.45 0 0.55 1"/>
+                </feTurbulence>
+                <feDisplacementMap in="colored" in2="warp" scale="45" xChannelSelector="R" yChannelSelector="G"/>
+              </filter>
+            </defs>
+            <rect width="100%" height="100%" filter="url(#noise-photo)"/>
+          </svg>
           <div class="category-tile__overlay"></div>
           <div class="category-tile__content">
             <div class="category-tile__label">Photography</div>
@@ -253,8 +303,33 @@
         <!-- Category 3: Email & Figma Creations -->
         <a href="creations.html" class="category-tile category-tile--webdesign reveal delay-3">
           <!-- SWAP: <img src="images/creations/cover.jpg" alt="Digital Creations" class="category-tile__img" /> -->
-          <div class="category-tile__placeholder"
-               style="background: linear-gradient(135deg, #3a1800 0%, #200a40 20%, #001a20 45%, #2a0820 70%, #3a1400 100%);"></div>
+          <svg class="category-tile__placeholder" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <filter id="noise-webdesign" color-interpolation-filters="sRGB" x="-20%" y="-20%" width="140%" height="140%">
+                <feTurbulence type="fractalNoise" baseFrequency="0.0038 0.0058" numOctaves="4" seed="3" result="colorNoise">
+                  <animate attributeName="baseFrequency"
+                           values="0.0038 0.0058;0.0058 0.0038;0.003 0.007;0.005 0.0048;0.0038 0.0058"
+                           dur="25s" repeatCount="indefinite" calcMode="spline"
+                           keyTimes="0;0.25;0.5;0.75;1"
+                           keySplines="0.45 0 0.55 1;0.45 0 0.55 1;0.45 0 0.55 1;0.45 0 0.55 1"/>
+                </feTurbulence>
+                <feColorMatrix type="matrix" in="colorNoise" result="colored"
+                               values="0.322 0 0 0 0.094
+                                       0.109 0 0 0 0.016
+                                       0     0 0 0 0
+                                       0     0 0 0 1"/>
+                <feTurbulence type="fractalNoise" baseFrequency="0.009 0.013" numOctaves="3" seed="8" result="warp">
+                  <animate attributeName="baseFrequency"
+                           values="0.009 0.013;0.013 0.009;0.007 0.016;0.011 0.011;0.009 0.013"
+                           dur="23s" repeatCount="indefinite" calcMode="spline"
+                           keyTimes="0;0.25;0.5;0.75;1"
+                           keySplines="0.45 0 0.55 1;0.45 0 0.55 1;0.45 0 0.55 1;0.45 0 0.55 1"/>
+                </feTurbulence>
+                <feDisplacementMap in="colored" in2="warp" scale="35" xChannelSelector="R" yChannelSelector="G"/>
+              </filter>
+            </defs>
+            <rect width="100%" height="100%" filter="url(#noise-webdesign)"/>
+          </svg>
           <div class="category-tile__overlay"></div>
           <div class="category-tile__content">
             <div class="category-tile__label">Design</div>
