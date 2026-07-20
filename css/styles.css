@@ -1306,8 +1306,9 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
   .slideshow__controls { bottom: 4rem; }
   .slideshow__dots { transform: translateY(2rem); }
 
-  .categories__grid { grid-template-columns: 1fr; }
-  .category-tile { aspect-ratio: 16/9; }
+  .categories__grid { grid-template-columns: repeat(2, 1fr); }
+  .category-tile { aspect-ratio: 4/5; }
+  .category-tile__name { font-size: 1.1rem; }
 
   .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 0.6rem; }
   .gallery-item.wide { grid-column: span 2; }
