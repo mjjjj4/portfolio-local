@@ -1312,6 +1312,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
 
   .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 0.6rem; }
   .gallery-item.wide { grid-column: span 2; }
+  #landscape .gallery-grid { grid-template-columns: 1fr; }
 
   .lightbox__arrow--prev { left: 0.5rem; }
   .lightbox__arrow--next { right: 0.5rem; }
