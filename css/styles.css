@@ -489,7 +489,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
 .category-tile__overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(255,255,255,0.07) 0%, transparent 38%, rgba(8,8,15,0.70) 100%);
+  background: linear-gradient(180deg, transparent 0%, transparent 18%, rgba(8,8,15,0.45) 52%, rgba(8,8,15,0.88) 100%);
   transition: background 0.4s ease;
 }
 
