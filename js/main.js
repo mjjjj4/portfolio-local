@@ -142,12 +142,10 @@
 
     const isMobile = window.matchMedia('(max-width: 768px)').matches;
 
-    // Prev/next arrows don't belong over a video: they collide with the
-    // native scrub bar and swipe-to-seek, so hide them entirely for videos.
+    // Prev/next arrows and the "X / Y" counter don't belong over a video:
+    // arrows collide with the native scrub bar and swipe-to-seek, and
+    // counting through a single video makes no sense.
     lightbox.classList.toggle('lightbox--video', item.type === 'video');
-    // On mobile, iOS overlays its own native mute icon in the top-right of
-    // any playing video — our close button used to sit right on top of it.
-    lightbox.classList.toggle('lightbox--mobile-video', item.type === 'video' && isMobile);
 
     if (item.type === 'video') {
       const vid = document.createElement('video');
