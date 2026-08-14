@@ -1026,6 +1026,21 @@ video.gallery-item__media {
 .lightbox__close:hover { background: rgba(249, 115, 22, 0.5); }
 .lightbox__close svg { width: 20px; height: 20px; stroke: white; fill: none; stroke-width: 2; }
 
+/* Videos don't get prev/next arrows — they collide with native video
+   controls and swipe-to-seek doesn't mix with swipe-to-navigate. */
+.lightbox--video .lightbox__arrow {
+  display: none;
+}
+
+/* On mobile, iOS overlays its own native mute icon top-right of a playing
+   video, right where our close button used to sit. Move it under the zoom
+   toggle on the left instead, clear of any native video chrome. */
+.lightbox--mobile-video .lightbox__close {
+  top: 5.25rem;
+  right: auto;
+  left: 1.25rem;
+}
+
 .lightbox__arrow {
   position: absolute;
   top: 50%;
