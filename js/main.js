@@ -150,15 +150,20 @@
       vid.style.maxHeight = '88vh';
       mediaWrap.appendChild(vid);
 
-      // On mobile, zoom the video to fullscreen automatically.
+      // On mobile, zoom the video to fullscreen automatically. Fire this
+      // synchronously (not on a later event) so it still counts as part of
+      // the user's tap — iOS Safari revokes fullscreen permission once the
+      // gesture's call stack has finished, even a moment later.
       if (window.matchMedia('(max-width: 768px)').matches) {
         const enterFullscreen = () => {
           if (vid.webkitEnterFullscreen) vid.webkitEnterFullscreen();
           else if (vid.requestFullscreen) vid.requestFullscreen().catch(() => {});
           else if (vid.webkitRequestFullscreen) vid.webkitRequestFullscreen();
         };
-        if (vid.readyState >= 1) enterFullscreen();
-        else vid.addEventListener('loadedmetadata', enterFullscreen, { once: true });
+        enterFullscreen();
+        // Retry once metadata is in, in case the first call was a no-op
+        // (some browsers need dimensions before fullscreen can apply).
+        vid.addEventListener('loadedmetadata', enterFullscreen, { once: true });
       }
     } else {
       const img = document.createElement('img');
