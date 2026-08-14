@@ -150,20 +150,23 @@
       vid.style.maxHeight = '88vh';
       mediaWrap.appendChild(vid);
 
-      // On mobile, zoom the video to fullscreen automatically. Fire this
-      // synchronously (not on a later event) so it still counts as part of
-      // the user's tap — iOS Safari revokes fullscreen permission once the
-      // gesture's call stack has finished, even a moment later.
+      // On mobile, zoom the video to fullscreen automatically. iOS Safari
+      // throws if webkitEnterFullscreen() is called before metadata is
+      // loaded, so this MUST be wrapped in try/catch — an uncaught error
+      // here used to abort openLightbox() partway through, before it ever
+      // added the "open" class, which made the whole lightbox appear dead.
       if (window.matchMedia('(max-width: 768px)').matches) {
         const enterFullscreen = () => {
-          if (vid.webkitEnterFullscreen) vid.webkitEnterFullscreen();
-          else if (vid.requestFullscreen) vid.requestFullscreen().catch(() => {});
-          else if (vid.webkitRequestFullscreen) vid.webkitRequestFullscreen();
+          try {
+            if (vid.webkitEnterFullscreen) vid.webkitEnterFullscreen();
+            else if (vid.requestFullscreen) vid.requestFullscreen().catch(() => {});
+            else if (vid.webkitRequestFullscreen) vid.webkitRequestFullscreen();
+          } catch (err) { /* not ready yet — the loadedmetadata retry below will catch it */ }
         };
-        enterFullscreen();
-        // Retry once metadata is in, in case the first call was a no-op
-        // (some browsers need dimensions before fullscreen can apply).
+        // Attach the retry listener first so it's guaranteed to run even
+        // if the immediate attempt throws.
         vid.addEventListener('loadedmetadata', enterFullscreen, { once: true });
+        enterFullscreen();
       }
     } else {
       const img = document.createElement('img');

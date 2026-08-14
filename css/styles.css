@@ -665,6 +665,12 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
   transition: transform 0.5s var(--transition-smooth);
 }
 
+/* iOS Safari can swallow taps on a playing <video>, so route all pointer
+   events to the parent .gallery-item, which owns the click-to-lightbox handler. */
+video.gallery-item__media {
+  pointer-events: none;
+}
+
 .gallery-item__overlay {
   position: absolute;
   inset: 0;
