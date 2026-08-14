@@ -145,9 +145,21 @@
       vid.src = item.src;
       vid.controls = true;
       vid.autoplay = true;
+      vid.playsInline = true;
       vid.style.maxWidth = '90vw';
       vid.style.maxHeight = '88vh';
       mediaWrap.appendChild(vid);
+
+      // On mobile, zoom the video to fullscreen automatically.
+      if (window.matchMedia('(max-width: 768px)').matches) {
+        const enterFullscreen = () => {
+          if (vid.webkitEnterFullscreen) vid.webkitEnterFullscreen();
+          else if (vid.requestFullscreen) vid.requestFullscreen().catch(() => {});
+          else if (vid.webkitRequestFullscreen) vid.webkitRequestFullscreen();
+        };
+        if (vid.readyState >= 1) enterFullscreen();
+        else vid.addEventListener('loadedmetadata', enterFullscreen, { once: true });
+      }
     } else {
       const img = document.createElement('img');
       img.src = item.src;
