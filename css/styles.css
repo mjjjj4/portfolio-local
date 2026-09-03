@@ -656,6 +656,12 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
   gap: 1.25rem;
 }
 
+/* Force an even two-up layout (e.g. a paired photo set) instead of
+   auto-fill, which would otherwise leave empty trailing columns. */
+.gallery-grid--two-col {
+  grid-template-columns: repeat(2, 1fr);
+}
+
 .gallery-item {
   position: relative;
   border-radius: 12px;
