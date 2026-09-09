@@ -661,6 +661,9 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
 .gallery-grid--two-col {
   grid-template-columns: repeat(2, 1fr);
 }
+.gallery-grid--three-col {
+  grid-template-columns: repeat(3, 1fr);
+}
 
 .gallery-item {
   position: relative;
