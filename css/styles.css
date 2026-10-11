@@ -674,6 +674,11 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
 
 .gallery-item.wide { grid-column: span 2; }
 
+/* Landscape banner in a portrait (3:4) gallery: spans two tiles, matches one
+   tile's height, and crops sideways instead of forcing a 3:4 crop. */
+.gallery-item--banner { grid-column: span 2; aspect-ratio: 1.54 / 1; }
+.gallery-item--banner .gallery-item__media { height: 100%; object-fit: cover; }
+
 .gallery-item__media {
   width: 100%;
   height: auto;
